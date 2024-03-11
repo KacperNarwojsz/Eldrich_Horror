@@ -1,3 +1,5 @@
+/* zmienić nazwy na myślniki */
+
 /* FONTS  */
 
 @font-face {
@@ -431,6 +433,10 @@
     border-color: black;
     align-self: center;
     cursor: pointer;
+}
+
+.startButton:disabled {
+    cursor: not-allowed;
 }
 
 .backBoardButton {

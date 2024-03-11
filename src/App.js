@@ -6,6 +6,11 @@ import Victory from './pages/Victory';
 import Defeat from './pages/Defeat';
 import './App.css';
 
+
+// Refactor na hooks i typescript 
+// zamiast stringów const 
+// konteksty
+// prettier format on save 
 class App extends Component {
   constructor() {
     super();
@@ -15,6 +20,10 @@ class App extends Component {
       level: false,
       characters: false,
     }
+  }
+
+  chooseAncientOne = (ancient) => {
+    this.setState({ route: 'AncientLvlChar', ancient: ancient});
   }
 
   chooseAzathoth = () => {
@@ -71,6 +80,10 @@ class App extends Component {
     this.setState({ level: 'Hard'})
   }
 
+  setCharacters = (characters) => {
+    this.setState({characters})
+  }
+
   setCharTo1 = () => {
     this.setState({characters: 1})
   }
@@ -120,6 +133,7 @@ class App extends Component {
                                             chooseCharNo3={this.setCharTo3} chooseCharNo4={this.setCharTo4}
                                             chooseCharNo5={this.setCharTo5} chooseCharNo6={this.setCharTo6}
                                             chooseCharNo7={this.setCharTo7} chooseCharNo8={this.setCharTo8}
+                                            setCharacters={this.setCharacters}
                                           />;
         case "AncientOne":           return <AncientOne 
                                             chooseAzathoth={this.chooseAzathoth}
@@ -141,6 +155,7 @@ class App extends Component {
                                             chooseYogSothoth={this.chooseYogSothoth}
                                             chooseShubNiggurath={this.chooseShubNiggurath}
                                             chooseCthulhu={this.chooseCthulhu}
+                                            chooseAncientOne={this.chooseAncientOne}
                                           />;
       }
     }

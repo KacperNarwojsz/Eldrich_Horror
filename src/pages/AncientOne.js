@@ -4,7 +4,10 @@ import EldritchBoard from "../Components/EldritchBoard";
 import AncientBoard from "../Components/AncientBoard";
 import Popup from "reactjs-popup";
 import chooseRandom from '../Components/Shuffler';
+import {ANCIENTS} from "../constants"
 import './AllPages.css'
+
+
 
 class AncientOne extends Component {
     constructor({ ancient, chooseAzathoth, chooseYogSothoth, chooseShubNiggurath, chooseCthulhu, level, characters, victory, defeat }) {
@@ -23,9 +26,10 @@ class AncientOne extends Component {
         this.shuffleDeckExpeditionTheHimalayas = [1,2,3]
         this.shuffleDeckExpeditionThePyramids = [1,2,3]
         this.shuffleDeckExpeditionTunguska = [1,2,3]
-        this.discardDeckExpedition = [] 
-        this.mythosDeckGreenEasy = ['EG1','EG2','EG3','EG4','EG5','NG1','NG2','NG3','NG4','NG5','NG6','NG7','NG8']
-        this.mythosDeckGreenNormal = ['EG1','EG2','EG3','EG4','EG5','NG1','NG2','NG3','NG4','NG5','NG6','NG7','NG8','HG1','HG2','HG3','HG4','HG5']
+        this.discardDeckExpedition = []
+        const fooEazy = ['EG1','EG2','EG3','EG4','EG5'] 
+        this.mythosDeckGreenEasy = [...fooEazy,'NG1','NG2','NG3','NG4','NG5','NG6','NG7','NG8']
+        this.mythosDeckGreenNormal = [...fooEazy,'NG1','NG2','NG3','NG4','NG5','NG6','NG7','NG8','HG1','HG2','HG3','HG4','HG5']
         this.mythosDeckGreenHard = ['NG1','NG2','NG3','NG4','NG5','NG6','NG7','NG8','HG1','HG2','HG3','HG4','HG5']
         this.mythosDeckYellowEasy = ['EY1','EY2','EY3','EY4','EY5','NY1','NY2','NY3','NY4','NY5','NY6','NY7','NY8','NY9','NY10','NY11']
         this.mythosDeckYellowNormal = ['EY1','EY2','EY3','EY4','EY5','NY1','NY2','NY3','NY4','NY5','NY6','NY7','NY8','NY9','NY10','NY11','HY1','HY2','HY3','HY4','HY5']
@@ -74,11 +78,20 @@ class AncientOne extends Component {
             this.mythosDeckBlue = this.mythosDeckBlueHard
         }
 
-        if (ancient === 'Azathoth') {
-            this.mythosDeck.push(chooseRandom(this.mythosDeckGreen)); 
-            this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-            this.mythosDeck.push(chooseRandom(this.mythosDeckYellow)); 
-            this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
+        const setupDeck = (green, yellow, blue) =>{
+            const greenCards = Array.from({length: green}).map(() => chooseRandom(this.mythosDeckGreen))
+            const blueCards = Array.from({length: blue}).map(() => chooseRandom(this.mythosDeckBlue)) 
+            const yellowCards = Array.from({length: yellow}).map(() => chooseRandom(this.mythosDeckYellow))   
+            
+            return [...greenCards, ...blueCards, ...yellowCards]
+        }
+
+        if (ancient === ANCIENTS.AZATHOTH) {
+            // this.mythosDeck.push(chooseRandom(this.mythosDeckGreen)); 
+            // this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
+            // this.mythosDeck.push(chooseRandom(this.mythosDeckYellow)); 
+            // this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
+            this.mythosDeck = setupDeck(1,2,1)
             this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
             this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
             this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
@@ -94,7 +107,7 @@ class AncientOne extends Component {
             for (let i = 0; i <= this.mythosDeckBlue.length; i++) {
                 this.rumorDeck.push(this.mythosDeckBlue[i])
             }    
-        } else if (ancient === 'YogSothoth') {
+        } else if (ancient === ANCIENTS.YOGSOTHOTH) {
             this.mythosDeck.push(chooseRandom(this.mythosDeckYellow)); 
             this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
             this.mythosDeck.push(chooseRandom(this.mythosDeckBlue)); 

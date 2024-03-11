@@ -1,9 +1,10 @@
 import React from "react";
 import eldritch_logo from "../pictures/Main/Eldritch_logo.png";
+import {ANCIENTS} from "../constants"
 import './AllPages.css'
 
 
-const Home = ({ chooseAzathoth, chooseYogSothoth, chooseShubNiggurath, chooseCthulhu }) => {
+const Home = ({ chooseAncientOne, chooseAzathoth, chooseYogSothoth, chooseShubNiggurath, chooseCthulhu }) => {
 
     return (
         <div className='home'>
@@ -14,7 +15,7 @@ const Home = ({ chooseAzathoth, chooseYogSothoth, chooseShubNiggurath, chooseCth
                 <h1 className="mainTitle">WYBIERZ PRZEDWIECZNEGO:</h1>
             </div>
             <div className="ancientsButtons">
-                <button className="mainButton" id="ButtonAzathoth" onClick={chooseAzathoth}>Azathoth</button>
+                <button className="mainButton" id="ButtonAzathoth" onClick={() => chooseAncientOne(ANCIENTS.AZATHOTH)}>Azathoth</button>
                 <button className="mainButton" id="ButtonYog" onClick={chooseYogSothoth}>Yog-Sothoth</button>
                 <button className="mainButton" id="ButtonShub" onClick={chooseShubNiggurath}>Shub-Niggurath</button>
                 <button className="mainButton" id="ButtonCthulhu" onClick={chooseCthulhu}>Cthulhu</button>
