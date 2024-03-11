@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   chooseAncientOne = (ancient) => {
-    this.setState({ route: 'AncientLvlChar', ancient: ancient});
+    this.setState({ route: 'AncientLvlChar', ancient});
   }
 
   chooseAzathoth = () => {

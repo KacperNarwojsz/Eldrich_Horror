@@ -1,8 +1,9 @@
 import React from "react";
+import "../pages/AllPages.css";
 
 const CharacterButtonsList = ({ characters, setCharacters }) => {
     return (
-      <ul>
+      <ul style={{ paddingLeft: 0 }}>
         {Array.from({ length: 8 }).map((_, index) => {
           return (
             <React.Fragment>

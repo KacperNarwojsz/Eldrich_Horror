@@ -18,14 +18,6 @@ const AncientLvlChar = ({
   chooseLvlEasy,
   chooseLvlNormal,
   chooseLvlHard,
-  chooseCharNo1,
-  chooseCharNo2,
-  chooseCharNo3,
-  chooseCharNo4,
-  chooseCharNo5,
-  chooseCharNo6,
-  chooseCharNo7,
-  chooseCharNo8,
   setCharacters,
 }) => {
   return (
