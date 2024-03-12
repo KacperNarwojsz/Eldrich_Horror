@@ -1,7 +1,7 @@
 export const ROUTES = {
   HOME: 'Home',
   ANCIENTLVLCHAR: 'AncientLvlChar',
-  ANCIENTONE: 'AncientOne',
+  ANCIENT: 'Ancient',
   VICTORY: 'Victory',
   DEFEAT: 'Defeat',
 };

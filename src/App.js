@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './pages/Home';
-import AncientOne from './pages/AncientOne';
+import Ancient from './pages/Ancient';
 import AncientLvlChar from './pages/AncientLvlChar';
 import Victory from './pages/Victory';
 import Defeat from './pages/Defeat';
@@ -10,13 +10,13 @@ import './App.css';
 // Refactor na hooks i typescript
 // zamiast stringów const
 // konteksty
-// prettier format on save
+// prettier format on save - done
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      route: 'Home',
+      route: ROUTES.HOME,
       ancient: false,
       level: false,
       characters: false,
@@ -27,22 +27,24 @@ class App extends Component {
     this.setState({ route: ROUTES.ANCIENTLVLCHAR, ancient });
   };
 
-  loadAncientOne = () => {
-    this.setState({ route: 'AncientOne' });
+  loadAncient = () => {
+    this.setState({ route: ROUTES.ANCIENT });
   };
 
   routeToVictory = () => {
-    this.setState({ route: 'Victory' });
+    this.setState({ route: ROUTES.VICTORY });
   };
 
   routeToDefeat = () => {
-    this.setState({ route: 'Defeat' });
+    this.setState({ route: ROUTES.DEFEAT });
   };
 
   routeToHome = () => {
-    this.setState({ route: 'Home' });
-    this.setState({ level: false });
-    this.setState({ characters: false });
+    this.setState({
+      route: ROUTES.HOME,
+      level: false,
+      characters: false,
+    });
   };
 
   reload = () => {
@@ -101,11 +103,11 @@ class App extends Component {
     const { route } = this.state;
     const checkRoute = (route) => {
       switch (route) {
-        case 'AncientLvlChar':
+        case ROUTES.ANCIENTLVLCHAR:
           return (
             <AncientLvlChar
               ancient={this.state.ancient}
-              loadAncientOne={this.loadAncientOne}
+              loadAncient={this.loadAncient}
               loadHome={this.routeToHome}
               level={this.state.level}
               characters={this.state.characters}
@@ -123,9 +125,9 @@ class App extends Component {
               setCharacters={this.setCharacters}
             />
           );
-        case 'AncientOne':
+        case ROUTES.ANCIENT:
           return (
-            <AncientOne
+            <Ancient
               chooseAzathoth={this.chooseAzathoth}
               chooseYogSothoth={this.chooseYogSothoth}
               chooseShubNiggurath={this.chooseShubNiggurath}
@@ -137,9 +139,9 @@ class App extends Component {
               defeat={this.routeToDefeat}
             />
           );
-        case 'Victory':
+        case ROUTES.VICTORY:
           return <Victory reloadApp={this.reload} />;
-        case 'Defeat':
+        case ROUTES.DEFEAT:
           return <Defeat reloadApp={this.reload} />;
         default:
           return <Home chooseAncient={this.chooseAncient} />;

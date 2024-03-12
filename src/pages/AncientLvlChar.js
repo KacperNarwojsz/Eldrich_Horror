@@ -1,17 +1,16 @@
-import React from "react";
-import LvlCharMatt from "../Components/LvlCharMatt";
-import char_icon from "../pictures/LvlChar/CharIcon.png";
-import lvl_icon from "../pictures/LvlChar/LvlIcon.png";
-import CharacterButtonsList from "../Components/CharacterButtonsList";
-import "./AllPages.css";
+import React from 'react';
+import LvlCharMatt from '../Components/LvlCharMatt';
+import char_icon from '../pictures/LvlChar/CharIcon.png';
+import lvl_icon from '../pictures/LvlChar/LvlIcon.png';
+import CharacterButtonsList from '../Components/CharacterButtonsList';
+import './AllPages.css';
 
 // disable button dopóki nie spełnione oba warunki
 // cursor pointer na disable zmnienic na not-allowed
 
-
 const AncientLvlChar = ({
   ancient,
-  loadAncientOne,
+  loadAncient,
   loadHome,
   level,
   characters,
@@ -27,26 +26,39 @@ const AncientLvlChar = ({
           <div className="lvlDiv">
             <h1 className="lvlCharText">POZIOM</h1>
             <div className="lvlBackDiv">
-              <button className="backLvlCharButton" onClick={loadHome}></button>
-              <img src={lvl_icon} className="lvl_char_icon" alt="lvl_icon" />
+              <button
+                className="backLvlCharButton"
+                onClick={loadHome}
+              ></button>
+              <img
+                src={lvl_icon}
+                className="lvl_char_icon"
+                alt="lvl_icon"
+              />
             </div>
             <div className="lvlButtonsDiv">
               <button
-                className={level === "Easy" ? "lvlButtonActive" : "lvlButton"}
+                className={
+                  level === 'Easy' ? 'lvlButtonActive' : 'lvlButton'
+                }
                 onClick={chooseLvlEasy}
               >
                 ŁATWY
               </button>
               <br></br>
               <button
-                className={level === "Normal" ? "lvlButtonActive" : "lvlButton"}
+                className={
+                  level === 'Normal' ? 'lvlButtonActive' : 'lvlButton'
+                }
                 onClick={chooseLvlNormal}
               >
                 NORMALNY
               </button>
               <br></br>
               <button
-                className={level === "Hard" ? "lvlButtonActive" : "lvlButton"}
+                className={
+                  level === 'Hard' ? 'lvlButtonActive' : 'lvlButton'
+                }
                 onClick={chooseLvlHard}
               >
                 TRUDNY
@@ -57,7 +69,11 @@ const AncientLvlChar = ({
         </div>
         <div className="bottomDiv">
           <div className="charDiv">
-            <img src={char_icon} className="lvl_char_icon" alt="char_icon" />
+            <img
+              src={char_icon}
+              className="lvl_char_icon"
+              alt="char_icon"
+            />
             <div className="charButtonsDiv">
               <CharacterButtonsList
                 characters={characters}
@@ -67,7 +83,7 @@ const AncientLvlChar = ({
             <button
               disabled={!characters || !level}
               className="startButton"
-              onClick={loadAncientOne}
+              onClick={loadAncient}
             >
               ROZPOCZNIJ
             </button>
