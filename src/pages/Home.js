@@ -3,6 +3,8 @@ import eldritch_logo from '../pictures/Main/Eldritch_logo.png';
 import { ANCIENTS } from '../constants';
 import './AllPages.css';
 
+// Czy da radę wygenerować te 4 przyciski przy pomocy Array.from ?
+
 const Home = ({ chooseAncient }) => {
   return (
     <div className="home">

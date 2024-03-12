@@ -4,6 +4,7 @@ import char_icon from '../pictures/LvlChar/CharIcon.png';
 import lvl_icon from '../pictures/LvlChar/LvlIcon.png';
 import CharacterButtonsList from '../Components/CharacterButtonsList';
 import './AllPages.css';
+import { LEVELS } from '../constants';
 
 // disable button dopóki nie spełnione oba warunki
 // cursor pointer na disable zmnienic na not-allowed
@@ -14,9 +15,7 @@ const AncientLvlChar = ({
   loadHome,
   level,
   characters,
-  chooseLvlEasy,
-  chooseLvlNormal,
-  chooseLvlHard,
+  setLvl,
   setCharacters,
 }) => {
   return (
@@ -41,7 +40,7 @@ const AncientLvlChar = ({
                 className={
                   level === 'Easy' ? 'lvlButtonActive' : 'lvlButton'
                 }
-                onClick={chooseLvlEasy}
+                onClick={() => setLvl(LEVELS.EASY)}
               >
                 ŁATWY
               </button>
@@ -50,7 +49,7 @@ const AncientLvlChar = ({
                 className={
                   level === 'Normal' ? 'lvlButtonActive' : 'lvlButton'
                 }
-                onClick={chooseLvlNormal}
+                onClick={() => setLvl(LEVELS.NORMAL)}
               >
                 NORMALNY
               </button>
@@ -59,7 +58,7 @@ const AncientLvlChar = ({
                 className={
                   level === 'Hard' ? 'lvlButtonActive' : 'lvlButton'
                 }
-                onClick={chooseLvlHard}
+                onClick={() => setLvl(LEVELS.HARD)}
               >
                 TRUDNY
               </button>

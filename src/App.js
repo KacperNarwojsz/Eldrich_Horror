@@ -7,10 +7,13 @@ import Defeat from './pages/Defeat';
 import { ROUTES } from './constants';
 import './App.css';
 
+// TO DO:
 // Refactor na hooks i typescript
 // zamiast stringów const
 // konteksty
-// prettier format on save - done
+
+//DONE:
+// prettier format on save
 
 class App extends Component {
   constructor() {
@@ -51,52 +54,12 @@ class App extends Component {
     window.location.reload(true);
   };
 
-  setLvlEasy = () => {
-    this.setState({ level: 'Easy' });
-  };
-
-  setLvlNormal = () => {
-    this.setState({ level: 'Normal' });
-  };
-
-  setLvlHard = () => {
-    this.setState({ level: 'Hard' });
+  setLvl = (level) => {
+    this.setState({ level });
   };
 
   setCharacters = (characters) => {
     this.setState({ characters });
-  };
-
-  setCharTo1 = () => {
-    this.setState({ characters: 1 });
-  };
-
-  setCharTo2 = () => {
-    this.setState({ characters: 2 });
-  };
-
-  setCharTo3 = () => {
-    this.setState({ characters: 3 });
-  };
-
-  setCharTo4 = () => {
-    this.setState({ characters: 4 });
-  };
-
-  setCharTo5 = () => {
-    this.setState({ characters: 5 });
-  };
-
-  setCharTo6 = () => {
-    this.setState({ characters: 6 });
-  };
-
-  setCharTo7 = () => {
-    this.setState({ characters: 7 });
-  };
-
-  setCharTo8 = () => {
-    this.setState({ characters: 8 });
   };
 
   render() {
@@ -111,27 +74,14 @@ class App extends Component {
               loadHome={this.routeToHome}
               level={this.state.level}
               characters={this.state.characters}
-              chooseLvlEasy={this.setLvlEasy}
-              chooseLvlNormal={this.setLvlNormal}
-              chooseLvlHard={this.setLvlHard}
-              chooseCharNo1={this.setCharTo1}
-              chooseCharNo2={this.setCharTo2}
-              chooseCharNo3={this.setCharTo3}
-              chooseCharNo4={this.setCharTo4}
-              chooseCharNo5={this.setCharTo5}
-              chooseCharNo6={this.setCharTo6}
-              chooseCharNo7={this.setCharTo7}
-              chooseCharNo8={this.setCharTo8}
+              setLvl={this.setLvl}
               setCharacters={this.setCharacters}
             />
           );
         case ROUTES.ANCIENT:
           return (
             <Ancient
-              chooseAzathoth={this.chooseAzathoth}
-              chooseYogSothoth={this.chooseYogSothoth}
-              chooseShubNiggurath={this.chooseShubNiggurath}
-              chooseCthulhu={this.chooseCthulhu}
+              chooseAncient={this.chooseAncient}
               ancient={this.state.ancient}
               level={this.state.level}
               characters={this.state.characters}

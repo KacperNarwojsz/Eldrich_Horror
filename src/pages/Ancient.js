@@ -10,17 +10,7 @@ import './AllPages.css';
 //Niejawny elseif na obiekcie
 
 class Ancient extends Component {
-  constructor({
-    ancient,
-    chooseAzathoth,
-    chooseYogSothoth,
-    chooseShubNiggurath,
-    chooseCthulhu,
-    level,
-    characters,
-    victory,
-    defeat,
-  }) {
+  constructor({ ancient, level, characters, victory, defeat }) {
     super();
     this.shuffleDeckReverseExpedition = [
       'Antarctica',
@@ -217,10 +207,6 @@ class Ancient extends Component {
     this.rumorDeck = [];
     this.state = {
       ancient: ancient,
-      chooseAzathoth: chooseAzathoth,
-      chooseYogSothoth: chooseYogSothoth,
-      chooseShubNiggurath: chooseShubNiggurath,
-      chooseCthulhu: chooseCthulhu,
       level: level,
       characters: characters,
       victory: victory,
@@ -551,13 +537,17 @@ class Ancient extends Component {
                         <button
                           className="defeatChoiceButton"
                           onClick={
-                            this.props.ancient === 'Azathoth'
-                              ? this.state.chooseAzathoth
-                              : this.props.ancient === 'YogSothoth'
-                              ? this.state.chooseYogSothoth
-                              : this.props.ancient === 'ShubNiggurath'
-                              ? this.state.chooseShubNiggurath
-                              : this.state.chooseCthulhu
+                            () =>
+                              this.props.chooseAncient(
+                                this.state.ancient
+                              )
+                            // this.props.ancient === ANCIENTS.AZATHOTH
+                            //   ? this.state.chooseAzathoth
+                            //   : this.props.ancient === ANCIENTS.YOGSOTHOTH
+                            //   ? this.state.chooseYogSothoth
+                            //   : this.props.ancient === ANCIENTS.SHUBNIGGURATH
+                            //   ? this.state.chooseShubNiggurath
+                            //   : this.state.chooseCthulhu
                           }
                         >
                           TAK

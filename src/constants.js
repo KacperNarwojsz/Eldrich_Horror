@@ -12,3 +12,9 @@ export const ANCIENTS = {
   SHUBNIGGURATH: 'ShubNiggurath',
   CTHULHU: 'Cthulhu',
 };
+
+export const LEVELS = {
+  EASY: 'Easy',
+  NORMAL: 'Normal',
+  HARD: 'Hard',
+};
