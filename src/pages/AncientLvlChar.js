@@ -4,8 +4,11 @@ import char_icon from '../pictures/LvlChar/CharIcon.png';
 import lvl_icon from '../pictures/LvlChar/LvlIcon.png';
 import CharacterButtonsList from '../Components/CharacterButtonsList';
 import './AllPages.css';
-import { LEVELS } from '../constants';
+import LevelButtonsList from '../Components/LevelButtonsList';
 
+//TO DO:
+
+// DONE:
 // disable button dopóki nie spełnione oba warunki
 // cursor pointer na disable zmnienic na not-allowed
 
@@ -36,32 +39,7 @@ const AncientLvlChar = ({
               />
             </div>
             <div className="lvlButtonsDiv">
-              <button
-                className={
-                  level === 'Easy' ? 'lvlButtonActive' : 'lvlButton'
-                }
-                onClick={() => setLvl(LEVELS.EASY)}
-              >
-                ŁATWY
-              </button>
-              <br></br>
-              <button
-                className={
-                  level === 'Normal' ? 'lvlButtonActive' : 'lvlButton'
-                }
-                onClick={() => setLvl(LEVELS.NORMAL)}
-              >
-                NORMALNY
-              </button>
-              <br></br>
-              <button
-                className={
-                  level === 'Hard' ? 'lvlButtonActive' : 'lvlButton'
-                }
-                onClick={() => setLvl(LEVELS.HARD)}
-              >
-                TRUDNY
-              </button>
+              <LevelButtonsList level={level} setLvl={setLvl} />
               <h1 className="lvlCharText">LICZBA GRACZY</h1>
             </div>
           </div>

@@ -1,8 +1,8 @@
-const chooseRandom = function(deck) {
-        const random = Math.floor(Math.random() * deck.length);
-        const card = deck.splice(random, 1)[0];
-        return card 
-    };
+const chooseRandom = function (deck) {
+  const random = Math.floor(Math.random() * deck.length);
+  const card = deck.splice(random, 1)[0];
+  return card;
+};
 
 export default chooseRandom;
 
@@ -16,8 +16,6 @@ export default chooseRandom;
 //         const random = Math.floor(Math.random() * deck.length);
 //         const card = deck.splice(random, 1)[0];
 //         return card
-//      } 
+//      }
 // };
 // export default chooseRandom;
-
-
