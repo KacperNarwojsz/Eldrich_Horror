@@ -4,7 +4,7 @@ import EldritchBoard from '../Components/EldritchBoard';
 import AncientBoard from '../Components/AncientBoard';
 import Popup from 'reactjs-popup';
 import chooseRandom from '../Components/Shuffler';
-import { ANCIENTS, CARDS } from '../constants';
+import { ANCIENTS, CARDS, EXPEDITIONS } from '../constants';
 import './AllPages.css';
 
 // DONE:
@@ -14,46 +14,8 @@ import './AllPages.css';
 class Ancient extends Component {
   constructor({ ancient, level, characters, victory, defeat }) {
     super();
-    this.shuffleDeckReverseExpedition = [
-      'Antarctica',
-      'Antarctica',
-      'Antarctica',
-      'TheAmazon',
-      'TheAmazon',
-      'TheAmazon',
-      'TheHeartofAfrica',
-      'TheHeartofAfrica',
-      'TheHeartofAfrica',
-      'TheHimalayas',
-      'TheHimalayas',
-      'TheHimalayas',
-      'ThePyramids',
-      'ThePyramids',
-      'ThePyramids',
-      'Tunguska',
-      'Tunguska',
-      'Tunguska',
-    ];
-    this.shuffleDeckReverseExpeditionFiltered = [
-      'Antarctica',
-      'Antarctica',
-      'Antarctica',
-      'TheAmazon',
-      'TheAmazon',
-      'TheAmazon',
-      'TheHeartofAfrica',
-      'TheHeartofAfrica',
-      'TheHeartofAfrica',
-      'TheHimalayas',
-      'TheHimalayas',
-      'TheHimalayas',
-      'ThePyramids',
-      'ThePyramids',
-      'ThePyramids',
-      'Tunguska',
-      'Tunguska',
-      'Tunguska',
-    ];
+    this.shuffleDeckReverseExpedition = [...EXPEDITIONS];
+    this.shuffleDeckReverseExpeditionFiltered = [...EXPEDITIONS];
     this.discardDeckReverseExpedition = [];
     this.deletedDeckReverseExpedition = [];
     this.shuffleDeckExpeditionAntarctica = [1, 2, 3];
@@ -314,10 +276,7 @@ class Ancient extends Component {
       (currentExpedition) => currentExpedition !== this.state.expeditionReverseShuffle
     );
     this.shuffleDeckReverseExpeditionFiltered = backupExpeditions;
-    if (
-      this.shuffleDeckReverseExpedition.length === 0 &&
-      this.shuffleDeckReverseExpeditionFiltered.length !== 0
-    ) {
+    if (this.shuffleDeckReverseExpedition.length === 0 && this.shuffleDeckReverseExpeditionFiltered.length !== 0) {
       this.setState({
         expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpeditionFiltered),
       });

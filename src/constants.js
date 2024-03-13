@@ -36,3 +36,24 @@ export const CARDS = {
     BLUE: ['HB1', 'HB2', 'HB3', 'HB4'],
   },
 };
+
+export const EXPEDITIONS = [
+  'Antarctica',
+  'Antarctica',
+  'Antarctica',
+  'TheAmazon',
+  'TheAmazon',
+  'TheAmazon',
+  'TheHeartofAfrica',
+  'TheHeartofAfrica',
+  'TheHeartofAfrica',
+  'TheHimalayas',
+  'TheHimalayas',
+  'TheHimalayas',
+  'ThePyramids',
+  'ThePyramids',
+  'ThePyramids',
+  'Tunguska',
+  'Tunguska',
+  'Tunguska',
+];
