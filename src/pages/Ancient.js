@@ -4,9 +4,11 @@ import EldritchBoard from '../Components/EldritchBoard';
 import AncientBoard from '../Components/AncientBoard';
 import Popup from 'reactjs-popup';
 import chooseRandom from '../Components/Shuffler';
-import { ANCIENTS } from '../constants';
+import { ANCIENTS, CARDS } from '../constants';
 import './AllPages.css';
 
+// DONE:
+// karty do contstants.js
 //Niejawny elseif na obiekcie
 
 class Ancient extends Component {
@@ -61,143 +63,15 @@ class Ancient extends Component {
     this.shuffleDeckExpeditionThePyramids = [1, 2, 3];
     this.shuffleDeckExpeditionTunguska = [1, 2, 3];
     this.discardDeckExpedition = [];
-    // do contstants.js
-    const fooEazy = ['EG1', 'EG2', 'EG3', 'EG4', 'EG5'];
-    this.mythosDeckGreenEasy = [
-      ...fooEazy,
-      'NG1',
-      'NG2',
-      'NG3',
-      'NG4',
-      'NG5',
-      'NG6',
-      'NG7',
-      'NG8',
-    ];
-    this.mythosDeckGreenNormal = [
-      ...fooEazy,
-      'NG1',
-      'NG2',
-      'NG3',
-      'NG4',
-      'NG5',
-      'NG6',
-      'NG7',
-      'NG8',
-      'HG1',
-      'HG2',
-      'HG3',
-      'HG4',
-      'HG5',
-    ];
-    this.mythosDeckGreenHard = [
-      'NG1',
-      'NG2',
-      'NG3',
-      'NG4',
-      'NG5',
-      'NG6',
-      'NG7',
-      'NG8',
-      'HG1',
-      'HG2',
-      'HG3',
-      'HG4',
-      'HG5',
-    ];
-    this.mythosDeckYellowEasy = [
-      'EY1',
-      'EY2',
-      'EY3',
-      'EY4',
-      'EY5',
-      'NY1',
-      'NY2',
-      'NY3',
-      'NY4',
-      'NY5',
-      'NY6',
-      'NY7',
-      'NY8',
-      'NY9',
-      'NY10',
-      'NY11',
-    ];
-    this.mythosDeckYellowNormal = [
-      'EY1',
-      'EY2',
-      'EY3',
-      'EY4',
-      'EY5',
-      'NY1',
-      'NY2',
-      'NY3',
-      'NY4',
-      'NY5',
-      'NY6',
-      'NY7',
-      'NY8',
-      'NY9',
-      'NY10',
-      'NY11',
-      'HY1',
-      'HY2',
-      'HY3',
-      'HY4',
-      'HY5',
-    ];
-    this.mythosDeckYellowHard = [
-      'NY1',
-      'NY2',
-      'NY3',
-      'NY4',
-      'NY5',
-      'NY6',
-      'NY7',
-      'NY8',
-      'NY9',
-      'NY10',
-      'NY11',
-      'HY1',
-      'HY2',
-      'HY3',
-      'HY4',
-      'HY5',
-    ];
-    this.mythosDeckBlueEasy = [
-      'EB1',
-      'EB2',
-      'EB3',
-      'EB4',
-      'NB1',
-      'NB2',
-      'NB3',
-      'NB4',
-    ];
-    this.mythosDeckBlueNormal = [
-      'EB1',
-      'EB2',
-      'EB3',
-      'EB4',
-      'NB1',
-      'NB2',
-      'NB3',
-      'NB4',
-      'HB1',
-      'HB2',
-      'HB3',
-      'HB4',
-    ];
-    this.mythosDeckBlueHard = [
-      'NB1',
-      'NB2',
-      'NB3',
-      'NB4',
-      'HB1',
-      'HB2',
-      'HB3',
-      'HB4',
-    ];
+    this.mythosDeckGreenEasy = [...CARDS.EASY.GREEN, ...CARDS.NORMAL.GREEN];
+    this.mythosDeckGreenNormal = [...CARDS.EASY.GREEN, ...CARDS.NORMAL.GREEN, ...CARDS.HARD.GREEN];
+    this.mythosDeckGreenHard = [...CARDS.NORMAL.GREEN, ...CARDS.HARD.GREEN];
+    this.mythosDeckYellowEasy = [...CARDS.EASY.YELLOW, ...CARDS.NORMAL.YELLOW];
+    this.mythosDeckYellowNormal = [...CARDS.EASY.YELLOW, ...CARDS.NORMAL.YELLOW, ...CARDS.HARD.YELLOW];
+    this.mythosDeckYellowHard = [...CARDS.NORMAL.YELLOW, ...CARDS.HARD.YELLOW];
+    this.mythosDeckBlueEasy = [...CARDS.EASY.BLUE, ...CARDS.NORMAL.BLUE];
+    this.mythosDeckBlueNormal = [...CARDS.EASY.BLUE, ...CARDS.NORMAL.BLUE, ...CARDS.HARD.BLUE];
+    this.mythosDeckBlueHard = [...CARDS.NORMAL.BLUE, ...CARDS.HARD.BLUE];
     this.mythosDeckGreen = [];
     this.mythosDeckYellow = [];
     this.mythosDeckBlue = [];
@@ -211,9 +85,7 @@ class Ancient extends Component {
       characters: characters,
       victory: victory,
       defeat: defeat,
-      expeditionReverseShuffle: chooseRandom(
-        this.shuffleDeckReverseExpedition
-      ),
+      expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpedition),
       expeditionPreviousReverse: 0,
       expeditionShuffle: 0,
       deletedAntarctica: false,
@@ -261,15 +133,9 @@ class Ancient extends Component {
     // }
 
     const setupDeck = (green, yellow, blue) => {
-      const greenCards = Array.from({ length: green }).map(() =>
-        chooseRandom(this.mythosDeckGreen)
-      );
-      const blueCards = Array.from({ length: blue }).map(() =>
-        chooseRandom(this.mythosDeckBlue)
-      );
-      const yellowCards = Array.from({ length: yellow }).map(() =>
-        chooseRandom(this.mythosDeckYellow)
-      );
+      const greenCards = Array.from({ length: green }).map(() => chooseRandom(this.mythosDeckGreen));
+      const blueCards = Array.from({ length: blue }).map(() => chooseRandom(this.mythosDeckBlue));
+      const yellowCards = Array.from({ length: yellow }).map(() => chooseRandom(this.mythosDeckYellow));
 
       return [...greenCards, ...blueCards, ...yellowCards];
     };
@@ -358,8 +224,7 @@ class Ancient extends Component {
 
   componentDidUpdate() {
     if (this.shuffleDeckReverseExpedition.length < 1) {
-      this.shuffleDeckReverseExpedition =
-        this.shuffleDeckReverseExpeditionFiltered.slice();
+      this.shuffleDeckReverseExpedition = this.shuffleDeckReverseExpeditionFiltered.slice();
     }
   }
 
@@ -367,9 +232,7 @@ class Ancient extends Component {
     switch (this.state.expeditionReverseShuffle) {
       case 'Antarctica':
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionAntarctica
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionAntarctica),
         });
         if (this.shuffleDeckExpeditionAntarctica.length < 1) {
           this.shuffleDeckExpeditionAntarctica = [1, 2, 3];
@@ -377,9 +240,7 @@ class Ancient extends Component {
         break;
       case 'TheAmazon':
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionTheAmazon
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionTheAmazon),
         });
         if (this.shuffleDeckExpeditionTheAmazon.length < 1) {
           this.shuffleDeckExpeditionTheAmazon = [1, 2, 3];
@@ -387,9 +248,7 @@ class Ancient extends Component {
         break;
       case 'TheHeartofAfrica':
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionTheHeartofAfrica
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionTheHeartofAfrica),
         });
         if (this.shuffleDeckExpeditionTheHeartofAfrica.length < 1) {
           this.shuffleDeckExpeditionTheHeartofAfrica = [1, 2, 3];
@@ -397,9 +256,7 @@ class Ancient extends Component {
         break;
       case 'TheHimalayas':
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionTheHimalayas
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionTheHimalayas),
         });
         if (this.shuffleDeckExpeditionTheHimalayas.length < 1) {
           this.shuffleDeckExpeditionTheHimalayas = [1, 2, 3];
@@ -407,9 +264,7 @@ class Ancient extends Component {
         break;
       case 'ThePyramids':
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionThePyramids
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionThePyramids),
         });
         if (this.shuffleDeckExpeditionThePyramids.length < 1) {
           this.shuffleDeckExpeditionThePyramids = [1, 2, 3];
@@ -417,9 +272,7 @@ class Ancient extends Component {
         break;
       default:
         this.setState({
-          expeditionShuffle: chooseRandom(
-            this.shuffleDeckExpeditionTunguska
-          ),
+          expeditionShuffle: chooseRandom(this.shuffleDeckExpeditionTunguska),
         });
         if (this.shuffleDeckExpeditionTunguska.length < 1) {
           this.shuffleDeckExpeditionTunguska = [1, 2, 3];
@@ -429,16 +282,12 @@ class Ancient extends Component {
       expeditionPreviousReverse: prevState.expeditionReverseShuffle,
     }));
     this.setState({
-      expeditionReverseShuffle: chooseRandom(
-        this.shuffleDeckReverseExpedition
-      ),
+      expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpedition),
     });
   };
 
   handleExpeditionDiscard = () => {
-    this.discardDeckReverseExpedition.push(
-      this.state.expeditionPreviousReverse
-    );
+    this.discardDeckReverseExpedition.push(this.state.expeditionPreviousReverse);
     this.discardDeckExpedition.push(this.state.expeditionShuffle);
   };
 
@@ -447,49 +296,34 @@ class Ancient extends Component {
       this.setState({ deletedAntarctica: true });
     } else if (this.state.expeditionReverseShuffle === 'TheAmazon') {
       this.setState({ deletedTheAmazon: true });
-    } else if (
-      this.state.expeditionReverseShuffle === 'TheHeartofAfrica'
-    ) {
+    } else if (this.state.expeditionReverseShuffle === 'TheHeartofAfrica') {
       this.setState({ deletedTheHeartofAfrica: true });
-    } else if (
-      this.state.expeditionReverseShuffle === 'TheHimalayas'
-    ) {
+    } else if (this.state.expeditionReverseShuffle === 'TheHimalayas') {
       this.setState({ deletedTheHimalayas: true });
-    } else if (
-      this.state.expeditionReverseShuffle === 'ThePyramids'
-    ) {
+    } else if (this.state.expeditionReverseShuffle === 'ThePyramids') {
       this.setState({ deletedThePyramids: true });
     } else if (this.state.expeditionReverseShuffle === 'Tunguska') {
       this.setState({ deletedTunguska: true });
     }
-    this.deletedDeckReverseExpedition.push(
-      this.state.expeditionReverseShuffle
-    );
+    this.deletedDeckReverseExpedition.push(this.state.expeditionReverseShuffle);
     let filterExpeditions = this.shuffleDeckReverseExpedition.filter(
-      (currentExpedition) =>
-        currentExpedition !== this.state.expeditionReverseShuffle
+      (currentExpedition) => currentExpedition !== this.state.expeditionReverseShuffle
     );
     this.shuffleDeckReverseExpedition = filterExpeditions;
-    let backupExpeditions =
-      this.shuffleDeckReverseExpeditionFiltered.filter(
-        (currentExpedition) =>
-          currentExpedition !== this.state.expeditionReverseShuffle
-      );
+    let backupExpeditions = this.shuffleDeckReverseExpeditionFiltered.filter(
+      (currentExpedition) => currentExpedition !== this.state.expeditionReverseShuffle
+    );
     this.shuffleDeckReverseExpeditionFiltered = backupExpeditions;
     if (
       this.shuffleDeckReverseExpedition.length === 0 &&
       this.shuffleDeckReverseExpeditionFiltered.length !== 0
     ) {
       this.setState({
-        expeditionReverseShuffle: chooseRandom(
-          this.shuffleDeckReverseExpeditionFiltered
-        ),
+        expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpeditionFiltered),
       });
     } else {
       this.setState({
-        expeditionReverseShuffle: chooseRandom(
-          this.shuffleDeckReverseExpedition
-        ),
+        expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpedition),
       });
     }
   };
@@ -522,25 +356,18 @@ class Ancient extends Component {
                     background: 'transparent',
                     border: 'transparent',
                   }}
-                  trigger={
-                    <button className="backBoardButton"></button>
-                  }
+                  trigger={<button className="backBoardButton"></button>}
                   modal
                   nested
                 >
                   {(close) => (
                     <div className="defeatPopup">
-                      <h1 className="defeatPopupText">
-                        Czy chcesz wrócić ?
-                      </h1>
+                      <h1 className="defeatPopupText">Czy chcesz wrócić ?</h1>
                       <div className="defeatChoiceButtons">
                         <button
                           className="defeatChoiceButton"
                           onClick={
-                            () =>
-                              this.props.chooseAncient(
-                                this.state.ancient
-                              )
+                            () => this.props.chooseAncient(this.state.ancient)
                             // this.props.ancient === ANCIENTS.AZATHOTH
                             //   ? this.state.chooseAzathoth
                             //   : this.props.ancient === ANCIENTS.YOGSOTHOTH
@@ -552,10 +379,7 @@ class Ancient extends Component {
                         >
                           TAK
                         </button>
-                        <button
-                          className="defeatChoiceButton"
-                          onClick={() => close()}
-                        >
+                        <button className="defeatChoiceButton" onClick={() => close()}>
                           NIE
                         </button>
                       </div>
@@ -576,17 +400,11 @@ class Ancient extends Component {
                   mythosDeckStage2={this.mythosDeckStage2}
                   mythosDeckStage3={this.mythosDeckStage3}
                   rumorDeck={this.rumorDeck}
-                  expeditionReverseShuffle={
-                    this.state.expeditionReverseShuffle
-                  }
-                  deletedDeckReverseExpedition={
-                    this.deletedDeckReverseExpedition
-                  }
+                  expeditionReverseShuffle={this.state.expeditionReverseShuffle}
+                  deletedDeckReverseExpedition={this.deletedDeckReverseExpedition}
                   deletedAntarctica={this.state.deletedAntarctica}
                   deletedTheAmazon={this.state.deletedTheAmazon}
-                  deletedTheHeartofAfrica={
-                    this.state.deletedTheHeartofAfrica
-                  }
+                  deletedTheHeartofAfrica={this.state.deletedTheHeartofAfrica}
                   deletedTheHimalayas={this.state.deletedTheHimalayas}
                   deletedThePyramids={this.state.deletedThePyramids}
                   deletedTunguska={this.state.deletedTunguska}
@@ -599,28 +417,18 @@ class Ancient extends Component {
                     background: 'transparent',
                     border: 'transparent',
                   }}
-                  trigger={
-                    <button className="surrenderButton"></button>
-                  }
+                  trigger={<button className="surrenderButton"></button>}
                   modal
                   nested
                 >
                   {(close) => (
                     <div className="defeatPopup">
-                      <h1 className="defeatPopupText">
-                        Czy chcesz poddać grę?
-                      </h1>
+                      <h1 className="defeatPopupText">Czy chcesz poddać grę?</h1>
                       <div className="defeatChoiceButtons">
-                        <button
-                          className="defeatChoiceButton"
-                          onClick={this.state.defeat}
-                        >
+                        <button className="defeatChoiceButton" onClick={this.state.defeat}>
                           TAK
                         </button>
-                        <button
-                          className="defeatChoiceButton"
-                          onClick={() => close()}
-                        >
+                        <button className="defeatChoiceButton" onClick={() => close()}>
                           NIE
                         </button>
                       </div>
@@ -634,16 +442,10 @@ class Ancient extends Component {
             <EncountersCards
               handleExpeditionShuffle={this.handleExpeditionShuffle}
               handleExpeditionDiscard={this.handleExpeditionDiscard}
-              expeditionReverseShuffle={
-                this.state.expeditionReverseShuffle
-              }
-              expeditionPreviousReverse={
-                this.state.expeditionPreviousReverse
-              }
+              expeditionReverseShuffle={this.state.expeditionReverseShuffle}
+              expeditionPreviousReverse={this.state.expeditionPreviousReverse}
               expeditionShuffle={this.state.expeditionShuffle}
-              discardDeckReverseExpedition={
-                this.discardDeckReverseExpedition
-              }
+              discardDeckReverseExpedition={this.discardDeckReverseExpedition}
               discardDeckExpedition={this.discardDeckExpedition}
               ancient={this.props.ancient}
               defeat={this.state.defeat}

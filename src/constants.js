@@ -18,3 +18,21 @@ export const LEVELS = {
   NORMAL: 'Normal',
   HARD: 'Hard',
 };
+
+export const CARDS = {
+  EASY: {
+    GREEN: ['EG1', 'EG2', 'EG3', 'EG4', 'EG5'],
+    YELLOW: ['EY1', 'EY2', 'EY3', 'EY4', 'EY5'],
+    BLUE: ['EB1', 'EB2', 'EB3', 'EB4'],
+  },
+  NORMAL: {
+    GREEN: ['NG1', 'NG2', 'NG3', 'NG4', 'NG5', 'NG6', 'NG7', 'NG8'],
+    YELLOW: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'NY6', 'NY7', 'NY8', 'NY9', 'NY10', 'NY11'],
+    BLUE: ['NB1', 'NB2', 'NB3', 'NB4'],
+  },
+  HARD: {
+    GREEN: ['HG1', 'HG2', 'HG3', 'HG4', 'HG5'],
+    YELLOW: ['HY1', 'HY2', 'HY3', 'HY4', 'HY5'],
+    BLUE: ['HB1', 'HB2', 'HB3', 'HB4'],
+  },
+};
