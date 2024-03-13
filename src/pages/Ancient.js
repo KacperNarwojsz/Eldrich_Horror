@@ -94,7 +94,7 @@ class Ancient extends Component {
     //   this.mythosDeckBlue = this.mythosDeckBlueHard;
     // }
 
-    const setupDeck = (green, yellow, blue) => {
+    const mythosDeckSetup = (green, yellow, blue) => {
       const greenCards = Array.from({ length: green }).map(() => chooseRandom(this.mythosDeckGreen));
       const blueCards = Array.from({ length: blue }).map(() => chooseRandom(this.mythosDeckBlue));
       const yellowCards = Array.from({ length: yellow }).map(() => chooseRandom(this.mythosDeckYellow));
@@ -103,73 +103,21 @@ class Ancient extends Component {
     };
 
     if (ancient === ANCIENTS.AZATHOTH) {
-      // this.mythosDeck.push(chooseRandom(this.mythosDeckGreen));
-      // this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      // this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      // this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeck = setupDeck(1, 2, 1);
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
+      this.mythosDeck = mythosDeckSetup(1, 2, 1);
+      this.mythosDeckStage2 = mythosDeckSetup(2, 3, 1);
+      this.mythosDeckStage3 = mythosDeckSetup(2, 4, 0);
     } else if (ancient === ANCIENTS.YOGSOTHOTH) {
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
+      this.mythosDeck = mythosDeckSetup(0, 2, 1);
+      this.mythosDeckStage2 = mythosDeckSetup(2, 3, 1);
+      this.mythosDeckStage3 = mythosDeckSetup(3, 4, 0);
     } else if (ancient === ANCIENTS.SHUBNIGGURATH) {
-      this.mythosDeck.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
+      this.mythosDeck = mythosDeckSetup(1, 2, 1);
+      this.mythosDeckStage2 = mythosDeckSetup(3, 2, 1);
+      this.mythosDeckStage3 = mythosDeckSetup(2, 4, 0);
     } else if (ancient === ANCIENTS.CTHULHU) {
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeck.push(chooseRandom(this.mythosDeckBlue));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage2.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckGreen));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
-      this.mythosDeckStage3.push(chooseRandom(this.mythosDeckYellow));
+      this.mythosDeck = mythosDeckSetup(0, 2, 2);
+      this.mythosDeckStage2 = mythosDeckSetup(1, 3, 0);
+      this.mythosDeckStage3 = mythosDeckSetup(3, 4, 0);
     }
     for (let i = 0; i <= this.mythosDeckBlue.length; i++) {
       this.rumorDeck.push(this.mythosDeckBlue[i]);
