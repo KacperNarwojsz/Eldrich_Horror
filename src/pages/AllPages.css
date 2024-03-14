@@ -111,7 +111,7 @@
 #Cthulhu {
     background-image: url(/src/pictures/Main/Ancient_Cthulhu.jpg);
 }
-.ancientLvlChar {
+.ancient-lvl-char {
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -122,7 +122,7 @@
     animation-fill-mode: forwards;
 }
 
-.topDiv {
+.top-div {
     position: fixed;
     height: 50vh;
     width: 100vw;
@@ -131,7 +131,7 @@
     z-index: 1;
 }
 
-.boardDiv {
+.board-div {
     position: relative; 
     width: 78.4vw;
     margin-left: 10.8vw;
@@ -139,14 +139,14 @@
     margin-top: 5.4vw;
 }
 
-.flexDiv {
+.flex-div {
     display: flex;
     height: 50vh;
     width: 100vw;
     align-items: flex-end;
 }
 
-.bottomDiv {
+.bottom-div {
     position: fixed;
     height: 50vh;
     width: 100vw;
@@ -155,12 +155,12 @@
     z-index: 0;
 }
 
-.lvlBackDiv {
+.lvl-back-div {
     display: flex;
     justify-content: center;
 }
 
-.lvlDiv {
+.lvl-div {
     display:flex;
     margin-left: 28vw;
     margin-right: 28vw;
@@ -169,7 +169,7 @@
     justify-content: flex-end;
 }
 
-.charDiv {
+.char-div {
     display:flex;
     margin-left:28vw;
     margin-right: 28vw;
@@ -178,7 +178,7 @@
     justify-content: flex-start;
 }
 
-.victoryDiv {
+.victory-div {
     height: 100vh;
     width: 100vw;
     background-image: url(/src/pictures/Main/Eldritch_Horror_Cover.png);
@@ -194,7 +194,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatDiv {
+.defeat-div {
     height: 100vh;
     width: 100vw;
     background-image: url(/src/pictures/Main/Defeat_Cover.jpg);
@@ -210,7 +210,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatPopup {
+.defeat-popup {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -222,7 +222,7 @@
     align-items: center;
 }
 
-.defeatChoiceButtons{
+.defeat-choice-buttons{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -231,7 +231,7 @@
 
 /* PICTURES  */
 
-.main_eldritch_logo {
+.main-eldritch-logo {
     height: 18vw;
     margin: 1vw;
     justify-content: center;
@@ -242,7 +242,7 @@
     animation-fill-mode: forwards;
 }
 
-.lvl_char_icon {
+.lvl-char-icon {
     height: 3vw;
     margin-bottom: 0.3vw;
     width: 3.3vw;
@@ -251,7 +251,7 @@
 
 /* TEXT  */
 
-.mainTitle {
+.main-title {
     margin: 1vw;
     font-family: 'Birmingham_Titling_Bold';
     font-size: 3.3vw;
@@ -265,13 +265,13 @@
     animation-fill-mode: forwards;
 }
 
-.lvlCharText {
+.lvl-char-text {
     font-family: 'Birmingham_Titling_Bold';
     font-size: 2vw;
     margin-bottom: 0.1vw;
 }
 
-.victoryText {
+.victory-text {
     font-family: 'Birmingham_Bold';
     font-size: 7vw;
     color: white;
@@ -284,7 +284,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatText {
+.defeat-text {
     font-family: 'Birmingham_Bold';
     font-size: 7vw;
     color: white;
@@ -298,7 +298,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatPopupText {
+.defeat-popup-text {
     font-family: 'Birmingham';
     font-size: 5vw;
     color: white;
@@ -307,12 +307,12 @@
 
 /* BUTTONS  */
 
-.ancientsButton {
+.ancients-button {
     width: 100vw;
     justify-content: center;
 }
 
-.mainButton {
+.main-button {
     height: 15vw;
     width: 15vw;
     margin: 1vw 2vw;
@@ -331,7 +331,7 @@
     cursor: pointer;
 }
 
-.mainButton:hover {
+.main-button:hover {
     transform: scale(1.2);
 }
 
@@ -361,7 +361,7 @@
     animation-delay: 7.5s;
 }
 
-.backLvlCharButton {
+.back-lvl-char-button {
     background-image: url(/src/pictures/Tokens/TokenArrow.png);
     background-color: transparent;
     background-size: 2.5vw;
@@ -377,7 +377,7 @@
     cursor: pointer;
 }
 
-.lvlButton {
+.lvl-button {
     font-family: 'Birmingham'; 
     font-size: 2vw;
     height: 3vw;
@@ -388,7 +388,7 @@
     cursor: pointer;
 }
 
-.lvlButtonActive {
+.lvl-button-active {
     font-family: 'Birmingham'; 
     font-size: 2vw;
     height: 3vw;
@@ -398,7 +398,7 @@
     border-color: white;
 }
 
-.charButton {
+.char-button {
     font-family: EldritchNumbers; 
     font-size: 2.3vw;
     padding-top: 0.4vw;
@@ -410,7 +410,7 @@
     cursor: pointer;
 }
 
-.charButtonActive {
+.char-button-active {
     font-family: EldritchNumbers; 
     font-size: 2.3vw;
     padding-top: 0.4vw;
@@ -421,7 +421,7 @@
     border-color: white;
 }
 
-.startButton {
+.start-button {
     font-family: 'Birmingham_Titling_Bold';
     font-size: 2.7vw;
     height: 5vw;
@@ -435,11 +435,11 @@
     cursor: pointer;
 }
 
-.startButton:disabled {
+.start-button:disabled {
     cursor: not-allowed;
 }
 
-.backBoardButton {
+.back-board-button {
     background-image: url(/src/pictures/Tokens/TokenBackWhite.png);
     background-color: transparent;
     background-size: cover;
@@ -461,11 +461,11 @@
     animation-fill-mode: forwards;
 }
 
-.backBoardButton:hover {
+.back-board-button:hover {
     transform: scale(1.1);
 }
 
-.surrenderButton {
+.surrender-button {
     background-image: url(/src/pictures/Tokens/TokenSurrender.png);
     background-color: transparent;
     background-size: cover;
@@ -487,11 +487,11 @@
     animation-fill-mode: forwards;
 }
 
-.surrenderButton:hover {
+.surrender-button:hover {
     transform: scale(1.1);
 }
 
-.victoryButton {
+.victory-button {
     font-family: 'Birmingham_Titling_Bold';
     font-size: 2.7vw;
     color: white;
@@ -512,7 +512,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatButton {
+.defeat-button {
     font-family: 'Birmingham_Titling_Bold';
     font-size: 2.7vw;
     color: white;
@@ -533,7 +533,7 @@
     animation-fill-mode: forwards;
 }
 
-.defeatChoiceButton {
+.defeat-choice-button {
     width: 7vw;
     height: 7vw;
     font-family: 'Birmingham'; 

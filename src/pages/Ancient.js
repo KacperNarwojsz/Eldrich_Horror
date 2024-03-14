@@ -241,24 +241,24 @@ class Ancient extends Component {
     return (
       <div className="ancient" id={`${this.props.ancient}`}>
         <EldritchBoard>
-          <div className="topDiv">
-            <div className="boardDiv">
-              <div className="flexDiv">
+          <div className="top-div">
+            <div className="board-div">
+              <div className="flex-div">
                 <Popup
                   contentStyle={{
                     background: 'transparent',
                     border: 'transparent',
                   }}
-                  trigger={<button className="backBoardButton"></button>}
+                  trigger={<button className="back-board-button"></button>}
                   modal
                   nested
                 >
                   {(close) => (
-                    <div className="defeatPopup">
-                      <h1 className="defeatPopupText">Czy chcesz wrócić ?</h1>
-                      <div className="defeatChoiceButtons">
+                    <div className="defeat-popup">
+                      <h1 className="defeat-popup-text">Czy chcesz wrócić ?</h1>
+                      <div className="defeat-choice-buttons">
                         <button
-                          className="defeatChoiceButton"
+                          className="defeat-choice-button"
                           onClick={
                             () => this.props.chooseAncient(this.state.ancient)
                             // this.props.ancient === ANCIENTS.AZATHOTH
@@ -272,14 +272,14 @@ class Ancient extends Component {
                         >
                           TAK
                         </button>
-                        <button className="defeatChoiceButton" onClick={() => close()}>
+                        <button className="defeat-choice-button" onClick={() => close()}>
                           NIE
                         </button>
                       </div>
                     </div>
                   )}
                 </Popup>
-                {/* <button className="backBoardButton" 
+                {/* <button className="back-board-button" 
                                         onClick={this.props.ancient === 'Azathoth'?this.state.chooseAzathoth
                                                 :this.props.ancient === 'YogSothoth'?this.state.chooseYogSothoth
                                                 :this.props.ancient === 'ShubNiggurath'?this.state.chooseShubNiggurath
@@ -310,18 +310,18 @@ class Ancient extends Component {
                     background: 'transparent',
                     border: 'transparent',
                   }}
-                  trigger={<button className="surrenderButton"></button>}
+                  trigger={<button className="surrender-button"></button>}
                   modal
                   nested
                 >
                   {(close) => (
-                    <div className="defeatPopup">
-                      <h1 className="defeatPopupText">Czy chcesz poddać grę?</h1>
-                      <div className="defeatChoiceButtons">
-                        <button className="defeatChoiceButton" onClick={this.state.defeat}>
+                    <div className="defeat-popup">
+                      <h1 className="defeat-popup-text">Czy chcesz poddać grę?</h1>
+                      <div className="defeat-choice-buttons">
+                        <button className="defeat-choice-button" onClick={this.state.defeat}>
                           TAK
                         </button>
-                        <button className="defeatChoiceButton" onClick={() => close()}>
+                        <button className="defeat-choice-button" onClick={() => close()}>
                           NIE
                         </button>
                       </div>
@@ -331,7 +331,7 @@ class Ancient extends Component {
               </div>
             </div>
           </div>
-          <div className="bottomDiv">
+          <div className="bottom-div">
             <EncountersCards
               handleExpeditionShuffle={this.handleExpeditionShuffle}
               handleExpeditionDiscard={this.handleExpeditionDiscard}
