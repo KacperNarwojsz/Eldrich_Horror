@@ -12,15 +12,7 @@ import LevelButtonsList from '../Components/LevelButtonsList';
 // disable button dopóki nie spełnione oba warunki
 // cursor pointer na disable zmnienic na not-allowed
 
-const AncientLvlChar = ({
-  ancient,
-  loadAncient,
-  loadHome,
-  level,
-  characters,
-  setLvl,
-  setCharacters,
-}) => {
+const AncientLvlChar = ({ ancient, loadAncient, loadHome, level, characters, setLvl, setCharacters }) => {
   return (
     <div className="ancientLvlChar" id={`${ancient}`}>
       <LvlCharMatt>
@@ -28,15 +20,8 @@ const AncientLvlChar = ({
           <div className="lvlDiv">
             <h1 className="lvlCharText">POZIOM</h1>
             <div className="lvlBackDiv">
-              <button
-                className="backLvlCharButton"
-                onClick={loadHome}
-              ></button>
-              <img
-                src={lvl_icon}
-                className="lvl_char_icon"
-                alt="lvl_icon"
-              />
+              <button className="backLvlCharButton" onClick={loadHome}></button>
+              <img src={lvl_icon} className="lvl_char_icon" alt="lvl_icon" />
             </div>
             <div className="lvlButtonsDiv">
               <LevelButtonsList level={level} setLvl={setLvl} />
@@ -46,22 +31,11 @@ const AncientLvlChar = ({
         </div>
         <div className="bottomDiv">
           <div className="charDiv">
-            <img
-              src={char_icon}
-              className="lvl_char_icon"
-              alt="char_icon"
-            />
+            <img src={char_icon} className="lvl_char_icon" alt="char_icon" />
             <div className="charButtonsDiv">
-              <CharacterButtonsList
-                characters={characters}
-                setCharacters={setCharacters}
-              />
+              <CharacterButtonsList characters={characters} setCharacters={setCharacters} />
             </div>
-            <button
-              disabled={!characters || !level}
-              className="startButton"
-              onClick={loadAncient}
-            >
+            <button disabled={!characters || !level} className="startButton" onClick={loadAncient}>
               ROZPOCZNIJ
             </button>
           </div>

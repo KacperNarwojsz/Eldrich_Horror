@@ -9,7 +9,7 @@ import './AllPages.css';
 
 // DONE:
 // karty do contstants.js
-//Niejawny elseif na obiekcie
+// Niejawny elseif na obiekcie
 
 class Ancient extends Component {
   constructor({ ancient, level, characters, victory, defeat }) {
@@ -79,20 +79,6 @@ class Ancient extends Component {
     this.mythosDeckGreen = levelConfig[level].green;
     this.mythosDeckYellow = levelConfig[level].yellow;
     this.mythosDeckBlue = levelConfig[level].blue;
-
-    // if (level === "Easy") {
-    //   this.mythosDeckGreen = this.mythosDeckGreenEasy;
-    //   this.mythosDeckYellow = this.mythosDeckYellowEasy;
-    //   this.mythosDeckBlue = this.mythosDeckBlueEasy;
-    // } else if (level === "Normal") {
-    //   this.mythosDeckGreen = this.mythosDeckGreenNormal;
-    //   this.mythosDeckYellow = this.mythosDeckYellowNormal;
-    //   this.mythosDeckBlue = this.mythosDeckBlueNormal;
-    // } else if (level === "Hard") {
-    //   this.mythosDeckGreen = this.mythosDeckGreenHard;
-    //   this.mythosDeckYellow = this.mythosDeckYellowHard;
-    //   this.mythosDeckBlue = this.mythosDeckBlueHard;
-    // }
 
     const mythosDeckSetup = (green, yellow, blue) => {
       const greenCards = Array.from({ length: green }).map(() => chooseRandom(this.mythosDeckGreen));
