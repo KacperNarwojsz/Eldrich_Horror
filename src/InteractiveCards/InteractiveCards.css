@@ -1,10 +1,10 @@
 /* --------- MYSTERIES --------- */
 
-.ancientMysteryFrontDiv {
+.ancient-mystery-front-div {
     display: flex;
 }
 
-.ancientMysteryFront {
+.ancient-mystery-front {
     height: 7.1vw;
     width: 11.3vw;
     margin: 0vw;
@@ -80,11 +80,11 @@
     background-image: url(/src/pictures/MysteryCards/Ancient_Cthulhu_Mystery_Front_4.png);
 }
 
-.ancientMysteryFront:hover {
+.ancient-mystery-front:hover {
     transform: scale(1.05);
 }
 
-.ancientMysteryFrontFocus {
+.ancient-mystery-front-focus {
     height: 31.5vw;
     width: 50vw;
     background-size: cover;
@@ -92,15 +92,15 @@
     border-radius: 1.5vw;
 }
 
-.popup-overlay:has(.ancientMysteryFrontFocus) {
+.popup-overlay:has(.ancient-mystery-front-focus) {
     background: none;
 }
 
-.popup-content:has(.ancientMysteryFrontFocus) {
+.popup-content:has(.ancient-mystery-front-focus) {
     width: 50vw;
 }
 
-.winningPopupText {
+.winning-popup-text {
     font-family: 'Birmingham';
     font-size: 4vw;
     color: white;
@@ -109,18 +109,18 @@
 
 /* COUNTER MYSTERIES */
 
-.mysteryTokensDiv {
+.mystery-tokens-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.mysteryCounter {
+.mystery-counter {
     display: flex;
     justify-content: center;
 }
 
-.tokenMysteryCounter {
+.token-mystery-counter {
     width: 9vw;
     height: 3.3vw;
     background-color: transparent;
@@ -133,7 +133,7 @@
     border-radius: 1vw;
 }
 
-.tokenMysteryDone {
+.token-mystery-done {
     width: 9vw;
     height: 3.3vw;
     background-image: url(/src/pictures/Tokens/TokenDone.png);
@@ -148,11 +148,11 @@
     cursor: pointer;
 }
 
-.tokenMysteryDone:hover {
+.token-mystery-done:hover {
     transform: scale(1.05);
 }
 
-.tokenMysteryMinus {
+.token-mystery-minus {
     background-image: url(/src/pictures/Tokens/TokenMinus.png);
     background-color: transparent;
     background-size: cover;
@@ -166,11 +166,11 @@
     cursor: pointer;
 }
 
-.tokenMysteryMinus:hover {
+.token-mystery-minus:hover {
     transform: scale(1.15);
 }
 
-.tokenMysteryPlus {
+.token-mystery-plus {
     background-image: url(/src/pictures/Tokens/TokenPlus.png);
     background-color: transparent;
     background-size: cover;
@@ -184,11 +184,11 @@
     cursor: pointer;    
 }
 
-.tokenMysteryPlus:hover {
+.token-mystery-plus:hover {
     transform: scale(1.15);
 }
 
-.tokenMysteryEldritch {
+.token-mystery-eldritch {
     background-image: url(/src/pictures/Tokens/TokenEldritch.png);
     background-size: cover;
     background-color: transparent;
@@ -198,7 +198,7 @@
     height: 2.8vw;
 }
 
-.tokenMysteryClue {
+.token-mystery-clue {
     background-image: url(/src/pictures/Tokens/TokenClue.png);
     background-size: cover;
     background-color: transparent;
@@ -208,7 +208,7 @@
     height: 2.8vw;
 }
 
-.tokenMysteryGate {
+.token-mystery-gate {
     background-image: url(/src/pictures/Tokens/TokenGate.png);
     background-size: cover;
     background-color: transparent;
@@ -218,7 +218,7 @@
     height: 2.8vw;
 }
 
-.tokenMysteryToughness{
+.token-mystery-toughness{
     background-image: url(/src/pictures/Tokens/TokenMonsterToughness.png);
     background-size: cover;
     background-color: transparent;
@@ -233,20 +233,20 @@
 
 /* MONSTER MYSTERIES */
 
-.mysteryTokensMonsterDiv {
+.mystery-tokens-monster-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 0.5vw;
 }
 
-.mysteryTokensMonster {
+.mystery-tokens-monster {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.mysteryMonster {
+.mystery-monster {
     background-size: cover;
     background-color: transparent;
     align-self: center;
@@ -299,7 +299,7 @@
     background-image: url(/src/pictures/Tokens/TokenCthulhuSlayed.png);
 }
 
-.tokenMysteryKilling {
+.token-mystery-killing {
     width: 3.5vw;
     height: 3.5vw;
     background-image: url(/src/pictures/Tokens/TokenKilling.png);
@@ -313,7 +313,7 @@
     transition: all .3s ease; 
 }
 
-.mysteryMonsterAddons {
+.mystery-monster-addons {
     background-color: rgba(238, 238, 215, 0.716);
     display: flex;
     justify-self: center;
@@ -327,7 +327,7 @@
     margin-left: 2vw;
 }
 
-.mysteryMonsterTokenMinus {
+.mystery-monster-token-minus {
     background-image: url(/src/pictures/Tokens/TokenMinus.png);
     background-color: transparent;
     background-size: cover;
@@ -338,7 +338,7 @@
     cursor: pointer;
 }
 
-.mysteryMonsterTokenHealth {
+.mystery-monster-token-health {
     background-image: url(/src/pictures/Tokens/TokenHealthSmall.png);
     background-color: transparent;
     background-size: cover;
@@ -348,7 +348,7 @@
     border: none;
 }
 
-.mysteryMonsterCounter {
+.mystery-monster-counter {
     background-color: transparent;
     width: 1.6vw;
     height: 1vw;
@@ -360,7 +360,7 @@
     font-size: 0.98vw;
 }
 
-.mysteryMonsterTokenPlus {
+.mystery-monster-token-plus {
     background-image: url(/src/pictures/Tokens/TokenPlus.png);
     background-color: transparent;
     background-size: cover;
@@ -372,7 +372,7 @@
     cursor: pointer;
 }
 
-.tokenMysteryMonsterDone {
+.token-mystery-monster-done {
     width: 3.5vw;
     height: 3.5vw;
     background-image: url(/src/pictures/Tokens/TokenDone.png);
@@ -387,24 +387,24 @@
     cursor: pointer;
 }
 
-.tokenMysteryMonsterDone:hover {
+.token-mystery-monster-done:hover {
     transform: scale(1.15);
 }
 
 /* --------- MYTHOS --------- */
 
-.mythosFrontDiv {
+.mythos-front-div {
     display: flex;
     flex-direction: column;
 }
 
-.mythosTokensDiv{
+.mythos-tokens-div{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.mythosFront {
+.mythos-front {
     height: 11.3vw;
     width: 7.2vw;
     margin: 0vw 1.2vw 0vw 1.2vw;
@@ -416,16 +416,16 @@
     cursor: pointer;
 }
 
-.mythosFront:hover {
+.mythos-front:hover {
     transform: scale(1.05);
 }
 
-/* .mythosFront:focus {
+/* .mythos-front:focus {
     transform: scale(3.8) translateY(7%);
 } */
 
 
-.mythosFrontFocus {
+.mythos-front-focus {
     height: 45vw;
     width: 28.5vw;
     background-size: cover;
@@ -433,16 +433,16 @@
     border-radius: 1.5vw;
 }
 
-.popup-overlay:has(.mythosFrontFocus) {
+.popup-overlay:has(.mythos-front-focus) {
     background: none;
 }
 
-.popup-content:has(.mythosFrontFocus) {
+.popup-content:has(.mythos-front-focus) {
     width: 28.5vw;
 }
 
 
-/* .mythosFrontBig {
+/* .mythos-front-big {
     height: 11.5vw;
     width: 7.4vw;
     margin: 1.2vw;
@@ -451,11 +451,11 @@
     transition: all .3s ease;
 }
 
-.mythosFrontBig:hover {
+.mythos-front-big:hover {
     transform: scale(2);
 } */
 
-.tokenMythosReckoning {
+.token-mythos-reckoning {
     width: 2.2vw;
     height: 2.2vw;
     background-image: url(/src/pictures/Tokens/TokenMythosReckoning.png);
@@ -473,11 +473,11 @@
     cursor: pointer;
 }
 
-.tokenMythosReckoning:hover {
+.token-mythos-reckoning:hover {
     transform: scale(1.2);
 }
 
-.tokenMythosDone {
+.token-mythos-done {
     width: 2vw;
     height: 2vw;
     background-image: url(/src/pictures/Tokens/TokenDone.png);
@@ -495,11 +495,11 @@
     cursor: pointer;
 }
 
-.tokenMythosDone:hover {
+.token-mythos-done:hover {
     transform: scale(1.2);
 }
 
-.tokenMythosClueFaded {
+.token-mythos-clue-faded {
     width: 2.2vw;
     height: 2.2vw;
     background-image: url(/src/pictures/Tokens/TokenClueFaded.png);
@@ -521,11 +521,11 @@
     cursor: pointer;
 }
 
-.tokenMythosClueFaded:hover {
+.token-mythos-clue-faded:hover {
     transform: scale(1.2);
 }
 
-.tokenMythosGateFaded {
+.token-mythos-gate-faded {
     width: 2.2vw;
     height: 2.2vw;
     background-image: url(/src/pictures/Tokens/TokenGate.png);
@@ -547,11 +547,11 @@
     cursor: pointer;
 }
 
-.tokenMythosGateFaded:hover {
+.token-mythos-gate-faded:hover {
     transform: scale(1.2);
 }
 
-.tokenMythosMonsterSlayed {
+.token-mythos-monster-slayed {
     width: 2.2vw;
     height: 2.2vw;
     background-color: transparent;
@@ -571,7 +571,7 @@
     cursor: pointer;
 }
 
-.tokenMythosMonsterSlayed:hover {
+.token-mythos-monster-slayed:hover {
     transform: scale(1.2);
 }
 
@@ -587,7 +587,7 @@
     background-image: url(/src/pictures/Tokens/TokenSpinnerOfWebsSlayed.png);
 }
 
-.tokenMythosEldritchFaded {
+.token-mythos-eldritch-faded {
     width: 2vw;
     height: 2vw;
     margin-left: 4.6vw;
@@ -670,7 +670,7 @@
     font-size: 5vw;
 }
 
-.tokenMythosMonsterToughnessFaded {
+.token-mythos-monster-toughness-faded {
     width: 3vw;
     height: 3.3vw;
     margin-left: 4.7vw;
@@ -697,7 +697,7 @@
     font-size: 2.9vw;
 }
 
-.tokenMythosHealthFaded {
+.token-mythos-health-faded {
     width: 4vw;
     height: 3vw;
     margin-left: 4.2vw;
@@ -724,7 +724,7 @@
     font-size: 4.8vw;
 }
 
-.outerPopupMythos {
+.outer-popup-mythos {
     position: fixed;
     display: flex;
     top:0;
@@ -735,7 +735,7 @@
     align-items: center;
 }
 
-.mythosPopUpMattYellow {
+.mythos-popup-matt-yellow {
     display: flex;
     flex-direction: column;
     background-image: url(/src/pictures/Mythos/MythosMattYellow.png);
@@ -746,7 +746,7 @@
     align-items: center;
 }
 
-.mythosPopUpYellowDiv {
+.mythos-popup-yellow-div {
     display: flex;
     flex-direction: column;
     width: 45vw;
@@ -756,7 +756,7 @@
     align-items: center;
 }
 
-.mythosPopUpYellowDivExpedition{
+.mythosp-popup-yellow-div-expedition{
     display: flex;
     flex-direction: column;
     width: 45vw;
@@ -766,7 +766,7 @@
     align-items: center;
 }
 
-.mythosPopUpYellowButton {
+.mythos-popup-yellow-button {
     background: none;
     border-radius: 2vw;
     border: 0.25vw black solid;
@@ -779,7 +779,7 @@
     cursor: pointer;
 }
 
-.mythosPopUpTextNumberYellow {
+.mythos-popup-text-number-yellow {
     display: inline;
     font-family: "Romana";  
     font-size: 2.5vw;
@@ -787,7 +787,7 @@
     text-align: center;
 }
 
-.mythosPopUpTextExpedition {
+.mythos-popup-text-expedition {
     display: inline;
     font-family: "F1669 Elzevir W00 Normal"; 
     font-size: 2.5vw;
@@ -795,25 +795,25 @@
     text-align: center;
 }
 
-.mythosPopUpYellowCaseDiv {
+.mythos-popup-yellow-case-div {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 2vw;
 }
 
-.mythosPopUpYellowExpedition {
+.mythos-popup-yellow-expedition {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.mythosPopUpExpeditions {
+.mythos-popup-expeditions {
     display: flex;
     flex-direction: row;
 }
 
-.tokenMythosPopUpExpedition {
+.token-mythos-popup-expedition {
     display: flex;
     flex-direction: row;
     background: none;
@@ -824,7 +824,7 @@
     height: 13vw;
 }
 
-.tokenMythosPopUpExpeditionSmall {
+.token-mythos-popup-expedition-small {
     display: flex;
     flex-direction: row;
     background: none;
@@ -837,7 +837,7 @@
     height: 6.5vw;
 }
 
-.tokenMythosPopUpExpeditionButton {
+.token-mythos-popup-expedition-button {
     display: flex;
     width: 28vw;
     height: 3.5vw;
@@ -856,7 +856,7 @@
     cursor: pointer;
 }
 
-.tokenMythosPopUpExpeditionButton:hover {
+.token-mythos-popup-expedition-button:hover {
     transform: scale(1.05);
 }
 
@@ -932,7 +932,7 @@
     background-image: url(/src/pictures/Tokens/TokenTunguskaCrossedOut.png);
 }
 
-.mythosPopUpMattBlue {
+.mythos-popup-matt-blue {
     display: flex;
     flex-direction: column;
     background-image: url(/src/pictures/Mythos/MythosMattBlue.png);
@@ -943,7 +943,7 @@
     align-items: center;
 }
 
-.mythosPopUpCloseButtonDiv {
+.mythos-popup-close-button-div {
     display: flex;
     width: 43vw;
     height: 4.5vw;
@@ -951,7 +951,7 @@
     align-items: flex-end;
 }
 
-.mythosPopUpCloseButton {
+.mythos-popup-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -964,7 +964,7 @@
     cursor: pointer;
 }
 
-.mythosPopUpTextDiv {
+.mythos-popup-text-div {
     display: flex;
     width: 40vw;
     height: 7vw;
@@ -972,7 +972,7 @@
     justify-content: center;
 }
 
-.mythosPopUpTextDivExpedition{
+.mythos-popup-text-div-expedition{
     display: flex;
     width: 40vw;
     height: 5vw;
@@ -998,7 +998,7 @@
     height: 6vw;
 }
 
-.mythosPopUpTextCaseDiv {
+.mythos-popup-text-case-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1006,7 +1006,7 @@
     height: 9vw;
 }
 
-.mythosPopUpText {
+.mythos-popup-text {
     display: inline;
     font-family: "F1669 Elzevir W00 Normal"; 
     font-size: 1.8vw;
@@ -1014,7 +1014,7 @@
     text-align: center;
 }
 
-.mythosPopUpTextNumber {
+.mythos-popup-text-number {
     display: inline;
     font-family: "Romana";  
     font-size: 1.8vw;
@@ -1022,7 +1022,7 @@
     text-align: center;
 }
 
-.mythosPopUpTextIcons {
+.mythos-popup-text-icons {
     display: inline;
     font-family: EldritchIcons;  
     font-size: 2vw;
@@ -1030,7 +1030,7 @@
     text-align: center;
 }
 
-.mythosPopUpCounterDiv {
+.mythos-popup-counter-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1038,7 +1038,7 @@
     height: 9vw;
 }
 
-.tokenMythosPopUpCounter {
+.token-mythos-popup-counter {
     width: 9vw;
     height: 3.7vw;
     background-color: transparent;
@@ -1051,11 +1051,11 @@
     border-radius: 1vw;
 }
 
-.tokenMythosPopUpCounterDiv {
+.token-mythos-popup-counter-div {
     display: flex;
 }
 
-.tokenMythosPopUpMinus {
+.token-mythos-popup-minus {
     background-image: url(/src/pictures/Tokens/TokenMinus.png);
     background-color: transparent;
     background-size: cover;
@@ -1069,11 +1069,11 @@
     cursor: pointer;
 }
 
-.tokenMythosPopUpMinus:hover {
+.token-mythos-popup-minus:hover {
     transform: scale(1.15);
 }
 
-.tokenMythosPopUpEldritch {
+.token-mythos-popup-eldritch {
     background-image: url(/src/pictures/Tokens/TokenEldritch.png);
     background-size: cover;
     background-color: transparent;
@@ -1083,7 +1083,7 @@
     height: 3.5vw;
 }
 
-.tokenMythosPopUpMonsterSurge {
+.token-mythos-popup-monster-surge {
     background-image: url(/src/pictures/Tokens/TokenMonsterSurge.png);
     background-size: cover;
     background-color: transparent;
@@ -1093,7 +1093,7 @@
     height: 3.5vw;
 }
 
-.tokenMythosPopUpMonsterToughness {
+.token-mythos-popup-monster-toughness {
     background-image: url(/src/pictures/Tokens/TokenMonsterToughness.png);
     background-size: cover;
     background-color: transparent;
@@ -1103,7 +1103,7 @@
     height: 4.2vw;
 }
 
-.tokenMythosPopUpPlus {
+.token-mythos-popup-plus {
     background-image: url(/src/pictures/Tokens/TokenPlus.png);
     background-color: transparent;
     background-size: cover;
@@ -1117,11 +1117,11 @@
     cursor: pointer;    
 }
 
-.tokenMythosPopUpPlus:hover {
+.token-mythos-popup-plus:hover {
     transform: scale(1.15);
 }
 
-.mythosPopUpDoneDiv {
+.mythos-popup-done-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1129,19 +1129,19 @@
     width: 40vw;
 }
 
-.mythosPopUpDoneCaseDiv {
+.mythos-popup-done-case-div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.mythosPopUpCounterCaseDiv {
+.mythos-popup-counter-case-div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.tokenMythosPopUpSanity {
+.token-mythos-popup-sanity {
     background-image: url(/src/pictures/Tokens/TokenSanity.png);
     background-size: cover;
     background-color: transparent;
@@ -1151,7 +1151,7 @@
     height: 3vw;
 }
 
-.tokenMythosPopUpHealth {
+.token-mythos-popup-health {
     background-image: url(/src/pictures/Tokens/TokenHealth.png);
     background-size: cover;
     background-color: transparent;
@@ -1166,7 +1166,7 @@
     height: 5vw;
 }
 
-.tokenMythosPopUpDelayedInvestigator {
+.token-mythos-popup-delayed-investigator {
     background-image: url(/src/pictures/Tokens/TokenDelayedInvestigator.png);
     background-size: cover;
     background-color: transparent;
@@ -1176,7 +1176,7 @@
     height: 3.5vw;
 }
 
-.tokenMythosPopUpDoom {
+.token-mythos-popup-doom {
     background-image: url(/src/pictures/Tokens/TokenDoom.png);
     background-size: cover;
     background-color: transparent;
@@ -1186,7 +1186,7 @@
     height: 3.4vw;
 }
 
-.tokenMythosPopUpGate {
+.token-mythos-popup-gate {
     background-image: url(/src/pictures/Tokens/TokenGate.png);
     background-size: cover;
     background-color: transparent;
@@ -1196,7 +1196,7 @@
     height: 4vw;
 }
 
-.tokenMythosPopUpArrow {
+.token-mythos-popup-arrow {
     background-image: url(/src/pictures/Tokens/TokenArrowRight.png);
     background-size: cover;
     background-color: transparent;
@@ -1206,7 +1206,7 @@
     height: 3.3vw;
 }
 
-.tokenMythosPopUpClueCrossedOut {
+.token-mythos-popup-clue-crossed-out {
     background-image: url(/src/pictures/Tokens/TokenClueCrossedOut.png);
     background-size: cover;
     background-color: transparent;
@@ -1217,7 +1217,7 @@
     height: 3.4vw;
 }
 
-.tokenMythosPopUpNumbersFont{
+.token-mythos-popup-numbers-font{
     font-family: EldritchNumbers;
     font-size: 3.4vw;
     font-weight: 300;
@@ -1225,7 +1225,7 @@
     margin-bottom: 0;
 }
 
-.tokenMythosPopUpDone {
+.token-mythos-popup-done {
     display: flex;
     width: 4vw;
     height: 3.3vw;
@@ -1242,11 +1242,11 @@
     cursor: pointer;
 }
 
-.tokenMythosPopUpDone:hover {
+.token-mythos-popup-done:hover {
     transform: scale(1.05);
 }
 
-.tokenMythosPopUpDefeat {
+.token-mythos-popup-defeat {
     display: flex;
     width: 15vw;
     height: 3.5vw;
@@ -1265,7 +1265,7 @@
     cursor: pointer;
 }
 
-.tokenMythosPopUpDefeat:hover {
+.token-mythos-popup-defeat:hover {
     transform: scale(1.05);
 }
 

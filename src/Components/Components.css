@@ -1,6 +1,6 @@
 /* --------- LEVEL AND CHARACTER MATT --------- */
 
-.lvlCharMatt {
+.lvl-char-matt-div {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -13,7 +13,7 @@
     animation-fill-mode: forwards;
 }
 
-.lvl_char_matt {
+.lvl-char-matt {
     width: 58vw;
     overflow: hidden;
     align-self: center;
@@ -21,14 +21,14 @@
 
 /* --------- MAIN BOARD --------- */
 
-.eldritchBoard {
+.eldritch-board-div {
     display: flex;
     justify-content: center;
     height: 100vh;
     width: 100vw;
 }
 
-.eldritch_board {
+.eldritch-board {
     width: 99vw;
     overflow: hidden;
     align-self: center;
@@ -44,62 +44,62 @@
 
 /* MAIN  */
 
-.ancientBoard {
+.ancient-board {
     display: flex;
     flex-direction: row;
 }
 
-.ancientMysteryMythosLvlChar {
+.ancient-mystery-mythos-lvl-char {
     display: flex;
     flex-direction: column;
 }
 
-.ancientMysteryLvlChar {
+.ancient-mystery-lvl-char {
     display: flex;
     flex-direction: row;
 }
 
-.ancientMystery {
+.ancient-mystery {
     display: flex;
     flex-direction: row;
     width: 49.3vw;
 }
 
-.ancientMysteryDiscard {
+.ancient-mystery-discard {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ancientMysteryDiscardButtonDiv {
+.ancient-mystery-discard-button-div {
     margin: 0;
     height: 1.3vw;
 }
 
-.ancientMythos {
+.ancient-mythos {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-.ancientMythosDiscard {
+.ancient-mythos-discard {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ancientMythosDiscardButtonDiv {
+.ancient-mythos-discard-button-div {
     height: 2.7vw;
 }
 
 /* BUTTONS  */
 
-.ancientSheetCard {
+.ancient-sheet-card {
     display: flex;
     flex-direction: column;
 }
 
-.ancientSheetStamp {
+.ancient-sheet-stamp {
     justify-content: flex-start;
     background-size: cover;
     height: 21.5vw;
@@ -118,7 +118,7 @@
     animation-fill-mode:forwards;
 }
 
-.ancientSheet {
+.ancient-sheet {
     justify-content: flex-start;
     background-size: cover;
     height: 21.5vw;
@@ -132,11 +132,11 @@
     cursor: pointer;
 }
 
-.ancientSheet:hover {
+.ancient-sheet:hover {
     transform: scale(1.03);
 }
 
-.ancientSheetFocus {
+.ancient-sheet-focus {
     justify-content: flex-start;
     background-size: cover;
     height: 48vw;
@@ -145,11 +145,11 @@
     border-radius: 1vw;
 }
 
-.popup-overlay:has(.ancientSheetFocus) {
+.popup-overlay:has(.ancient-sheet-focus) {
     background: none;
 }
 
-.popup-content:has(.ancientSheetFocus) {
+.popup-content:has(.ancient-sheet-focus) {
     width: 39.1vw;
 }
 
@@ -185,7 +185,7 @@
     background-image: url(/src/pictures/SheetCards/Ancient_Cthulhu_sheet_back.png);
 }
 
-.flipButton {
+.flip-button {
     background-image: url(/src/pictures/Tokens/TokenFlip.png);
     background-size: cover;
     background-color: transparent;
@@ -195,7 +195,7 @@
     transition: all .3s ease;
 }
 
-.flipButton:hover {
+.flip-button:hover {
     transform: scale(1.1);
 }
 
@@ -223,7 +223,7 @@
     margin-left: 1vw;
 }
 
-.sheetCardSanityCounter {
+.sheet-card-sanity-counter {
     width: 2.5vw;
     height: 2.5vw;
     background-image: url(/src/pictures/Tokens/TokenSanityFaded.png);
@@ -241,14 +241,14 @@
     font-size: 1.2vw;
 }
 
-.sheetCardCounterDiv {
+.sheet-card-counter-div {
     display: flex;
     flex-direction: row;
     margin-top: 8vw;
     margin-left: 0.6vw;
 }
 
-.sheetCardEldritchCounter {
+.sheet-card-eldritch-counter {
     width: 2.5vw;
     height: 2.5vw;
     background-image: url(/src/pictures/Tokens/TokenEldritchFaded.png);
@@ -264,7 +264,7 @@
     color: white;
 }
 
-.sheetCardGateCounter {
+.sheet-card-gate-counter {
     width: 2.5vw;
     height: 2.5vw;
     background-image: url(/src/pictures/Tokens/TokenGateFaded.png);
@@ -282,7 +282,7 @@
     color: white;
 }
 
-.sheetCardDefeatButton {
+.sheet-card-defeat-button {
     display: flex;
     width: 15vw;
     height: 3.5vw;
@@ -302,7 +302,7 @@
     cursor: pointer;
 }
 
-.sheetCardDefeatButton:hover {
+.sheet-card-defeat-button:hover {
     transform: scale(1.05);
 }
 
@@ -315,7 +315,7 @@
     margin-left: 0.7vw;
 }
 
-.sheetCardAwakeningButton {
+.sheet-card-awakening-button {
     display: flex;
     width: 13vw;
     height: 2.9vw;
@@ -335,11 +335,11 @@
     cursor: pointer;
 }
 
-.sheetCardAwakeningButton:hover {
+.sheet-card-awakening-button:hover {
     transform: scale(1.05);
 }
 
-.sheetCardAddons {
+.sheet-card-addons {
     align-self: center;
     background-color: rgba(238, 238, 215, 0.716);
     margin: 0.1vw;
@@ -371,7 +371,7 @@
     margin-left: 0.5vw;
 }
 
-.sheetCardTokenMinus {
+.sheet-card-token-minus {
     background-image: url(/src/pictures/Tokens/TokenMinus.png);
     background-color: transparent;
     background-size: cover;
@@ -392,7 +392,7 @@
     cursor: pointer;
 }
 
-.sheetCardEldritch {
+.sheet-card-eldritch {
     background-image: url(/src/pictures/Tokens/TokenEldritch.png);
     background-color: transparent;
     background-size: cover;
@@ -409,7 +409,7 @@
     height: 2.4vw;
 }
 
-.sheetCardGate {
+.sheet-card-gate {
     background-image: url(/src/pictures/Tokens/TokenGate.png);
     background-color: transparent;
     background-size: cover;
@@ -426,7 +426,7 @@
     height: 2.4vw;
 }
 
-.sheetCardSanity {
+.sheet-card-sanity {
     background-image: url(/src/pictures/Tokens/TokenSanitySmall.png);
     background-color: transparent;
     background-size: cover;
@@ -443,7 +443,7 @@
     height: 2vw;
 }
 
-.sheetCardCounter {
+.sheet-card-counter {
     background-color: transparent;
     width: 1.6vw;
     height: 1vw;
@@ -470,7 +470,7 @@
     padding-top: 0.2vw;
 }
 
-.sheetCardTokenPlus {
+.sheet-card-token-plus {
     background-image: url(/src/pictures/Tokens/TokenPlus.png);
     background-color: transparent;
     background-size: cover;
@@ -498,7 +498,7 @@
     margin-left: 3.7vw;
 }
 
-.discardButton {
+.discard-button {
     background-color: transparent;
     width: 7vw;
     height: 1.3vw;
@@ -524,14 +524,11 @@
     margin-bottom: 0vw;
 }
 
-/* #discardEncounter {
-} */
-
-.discardButton:hover {
+.discard-button:hover {
     transform: scale(1.1);
 }
 
-.ancientMysteryReverseStamp {
+.ancient-mystery-reverse-stamp {
     height: 7.4vw;
     width: 11.5vw;
     margin: 1.2vw;
@@ -547,7 +544,7 @@
     animation-fill-mode:forwards;   
 }
 
-.ancientMysteryReverse {
+.ancient-mystery-reverse {
     height: 7.4vw;
     width: 11.5vw;
     margin: 1.2vw;
@@ -558,12 +555,12 @@
     cursor: pointer;
 }
 
-.ancientMysteryReverse:hover {
+.ancient-mystery-reverse:hover {
     transform: scale(1.1);
     z-index: 50;
 }
 
-.mysteryCounterText{
+.mystery-counter-text{
     display: flex;
     font-family: "F1669 Elzevir W00 Normal"; 
     font-size: 1.2vw;
@@ -588,7 +585,7 @@
     background-image: url(/src/pictures/MysteryCards/Ancient_Cthulhu_Mystery.png);
 }
 
-.ancientMysteryFrontPopup {
+.ancient-mystery-front-popup {
     display: flex;
     height: 26.3vw;
     width: 41.5vw;
@@ -597,7 +594,7 @@
     border-radius: 0.9vw;
 }
 
-.mysteryCloseButton {
+.mystery-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -612,7 +609,7 @@
     cursor: pointer;
 }
 
-.mysteryCardDiscard {
+.mystery-card-discard {
     display: flex;
     height: 26.3vw;
     width: 42.3vw;
@@ -624,7 +621,7 @@
     cursor: pointer;
 }
 
-.mysteryDiscardCloseButton {
+.mystery-discard-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -639,7 +636,7 @@
     cursor: pointer;
 }
 
-.mythosStamp {
+.mythos-stamp {
     background-image: url(/src/pictures/Mythos/Mythos_Card.png);
     height: 11.5vw;
     width: 7.4vw;
@@ -673,7 +670,7 @@
     z-index: 50;
 }
 
-.mythosCounterText{
+.mythos-counter-text{
     display: flex;
     font-family: "F1669 Elzevir W00 Normal"; 
     font-size: 1.4vw;
@@ -682,7 +679,7 @@
     color: rgb(200, 200, 200);
 }
 
-.mythosDefeat {
+.mythos-defeat {
     background-image: url(/src/pictures/Mythos/Mythos_Defeat_Card.png);
     height: 11.5vw;
     width: 7.4vw;
@@ -694,12 +691,12 @@
     cursor: pointer;
 }
 
-.mythosDefeat:hover {
+.mythos-defeat:hover {
     transform: scale(1.1);
     z-index: 50;
 }
 
-.mythosFrontPopup {
+.mythos-front-popup {
     display: flex;
     height: 41vw;
     width: 26.3vw;
@@ -708,7 +705,7 @@
     border-radius: 0.9vw;
 }
 
-.mythosCloseButton {
+.mythos-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -725,7 +722,7 @@
 
 /* --------- LEVEL AND CHARACTERS --------- */
 
-.lvlChar {
+.lvl-char {
     display: flex;
     flex-direction: column;
     width: 9.6vw;
@@ -823,7 +820,7 @@
     margin-right: 11vw;
 }
 
-.outerPopup {
+.outer-popup {
     position: fixed;
     display: flex;
     top:0;
@@ -834,12 +831,12 @@
     align-items: center;
 }
 
-.encounterCardDiscardDiv {
+.encounter-card-discard-div {
     flex-direction: column;
     width: 10vw;
 }
 
-.outerPopupDiscard {
+.outer-popup-discard {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -853,7 +850,7 @@
 
 /* BUTTONS  */
 
-.encounterCardStamp {
+.encounter-card-stamp {
     height: 11.5vw;
     width: 7.4vw;
     margin: 1vw;
@@ -870,7 +867,7 @@
     animation-fill-mode:forwards;
 }
 
-.encounterCard {
+.encounter-card {
     height: 11.5vw;
     width: 7.4vw;
     margin: 1vw;
@@ -883,11 +880,11 @@
     cursor: pointer;
 }
 
-.encounterCard:hover {
+.encounter-card:hover {
     transform: scale(1.05) translateY(-1%);
 }
 
-.encounterCardFront {
+.encounter-card-front {
     display: flex;
     height: 41vw;
     width: 26.3vw;
@@ -896,7 +893,7 @@
     border-radius: 0.9vw;
 }
 
-.encounterCloseButton {
+.encounter-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -911,7 +908,7 @@
     cursor: pointer;
 }
 
-.encounterCardDiscard {
+.encounter-card-discard {
     display: flex;
     height: 41vw;
     width: 26.3vw;
@@ -923,7 +920,7 @@
     cursor: pointer;
 }
 
-.encounterDiscardCloseButton {
+.encounter-discard-close-button {
     width: 1.5vw;
     height: 1.5vw;
     font-family: 'Birmingham'; 
@@ -938,7 +935,7 @@
     cursor: pointer;
 }
 
-.discardText {
+.discard-text {
     font-family: 'Birmingham'; 
     font-size: 5vw;
     margin-top: -44vw;
