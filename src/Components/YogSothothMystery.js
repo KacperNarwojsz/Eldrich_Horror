@@ -220,24 +220,3 @@ class YogSothothMystery extends Component {
 }
 
 export default YogSothothMystery;
-
-<Popup
-  contentStyle={{ background: 'transparent', border: 'transparent' }}
-  trigger={<button className="backBoardButton"></button>}
-  modal
-  nested
->
-  {(close) => (
-    <div className="defeat-popup">
-      <h1 className="defeat-popup-text">Czy została zakończona Faza Mitów ?</h1>
-      <div className="defeat-choice-buttons">
-        <button className="defeat-choice-button" onClick={this.props.victory}>
-          TAK
-        </button>
-        <button className="defeat-choice-button" onClick={() => close()}>
-          NIE
-        </button>
-      </div>
-    </div>
-  )}
-</Popup>;
