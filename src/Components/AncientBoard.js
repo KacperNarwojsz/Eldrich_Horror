@@ -1209,16 +1209,16 @@ class AncientBoard extends Component {
                                 <div className="mythos-popup-matt-yellow">
                                   <div className="mythos-popup-yellow-div-expedition">
                                     <div className="mythos-popup-text-div-expedition">
-                                      <p className="mythosPopUpTextExpedition">Aktywna Ekspedycja:</p>
+                                      <p className="mythos-popup-text-expedition">Aktywna Ekspedycja:</p>
                                     </div>
-                                    <div className="mythosPopUpYellowExpedition">
+                                    <div className="mythos-popup-yellow-expedition">
                                       <button
-                                        className="tokenMythosPopUpExpedition"
+                                        className="token-mythos-popup-expedition"
                                         id={`tokenMythosPopUpExpedition${this.props.expeditionReverseShuffle}`}
                                       ></button>
                                     </div>
                                     <button
-                                      className="mythosPopUpYellowButton"
+                                      className="mythos-popup-yellow-button"
                                       onClick={() => {
                                         this.removeExpedition();
                                         close();
@@ -1241,14 +1241,14 @@ class AncientBoard extends Component {
                           <Popup
                             onOpen={this.chooseRumor}
                             contentStyle={{ background: 'none', border: 'transparent' }}
-                            trigger={<button className="mythosCloseButton">X</button>}
+                            trigger={<button className="mythos-close-button">X</button>}
                             modal
                             nested
                           >
                             {(close) => (
-                              <div className="outerPopup">
-                                <div className="mythosFrontPopup" id={`Mythos${this.state.rumorNo}`}>
-                                  <button className="mythosCloseButton" onClick={() => close()}>
+                              <div className="outer-popup">
+                                <div className="mythos-front-popup" id={`Mythos${this.state.rumorNo}`}>
+                                  <button className="mythos-close-button" onClick={() => close()}>
                                     X
                                   </button>
                                 </div>
@@ -1259,32 +1259,32 @@ class AncientBoard extends Component {
                           <Popup
                             onClose={() => close()}
                             contentStyle={{ background: 'none', border: 'transparent' }}
-                            trigger={<button className="mythosCloseButton">X</button>}
+                            trigger={<button className="mythos-close-button">X</button>}
                             modal
                             nested
                           >
                             {(close) => (
-                              <div className="outerPopupMythos">
-                                <div className="mythosPopUpMattYellow">
+                              <div className="outer-popup-mythos">
+                                <div className="mythos-popup-matt-yellow">
                                   {this.discardMysteryDeck.length === 0 ? (
-                                    <div className="mythosPopUpYellowDiv">
-                                      <div className="mythosPopUpTextDiv">
-                                        <p className="mythosPopUpText">
+                                    <div className="mythos-popup-yellow-div">
+                                      <div className="mythos-popup-text-div">
+                                        <p className="mythos-popup-text">
                                           Żadna tajemnica nie została rozwiązana. <br></br>Zagłada postępuje o{' '}
-                                          <span className="mythosPopUpTextNumber">1</span>.
+                                          <span className="mythos-popup-text-number">1</span>.
                                         </p>
                                       </div>
-                                      <div className="mythosPopUpYellowCaseDiv">
-                                        <button className="tokenMythosPopUpDoom"></button>
-                                        <h1 className="tokenMythosPopUpNumbersFont"> - 1</h1>
+                                      <div className="mythos-popu-yellow-case-div">
+                                        <button className="token-mythos-popup-doom"></button>
+                                        <h1 className="token-mythos-popup-numbers-font"> - 1</h1>
                                       </div>
-                                      <button className="tokenMythosPopUpDone" onClick={() => close()}></button>
+                                      <button className="token-mythos-popup-done" onClick={() => close()}></button>
                                     </div>
                                   ) : null}
                                   {this.discardMysteryDeck.length > 0 ? (
-                                    <div className="mythosPopUpYellowDiv">
+                                    <div className="mythos-popup-yellow-div">
                                       <button
-                                        className="mythosPopUpYellowButton"
+                                        className="mythos-popup-yellow-button"
                                         onClick={() => {
                                           reverseMystery();
                                           close();
@@ -1292,9 +1292,9 @@ class AncientBoard extends Component {
                                       >
                                         Cofnięcie rozwiązanej tajemnicy
                                       </button>
-                                      <button className="mythosPopUpYellowButton" onClick={() => close()}>
+                                      <button className="mythos-popup-yellow-button" onClick={() => close()}>
                                         Poświęcenie{' '}
-                                        <span className="mythosPopUpTextNumberYellow">
+                                        <span className="mythos-popup-text-number-yellow">
                                           {Math.ceil(this.state.characters / 2)}
                                         </span>{' '}
                                         wskazówek
@@ -1306,7 +1306,7 @@ class AncientBoard extends Component {
                             )}
                           </Popup>
                         ) : (
-                          <button className="mythosCloseButton" onClick={() => close()}>
+                          <button className="mythos-close-button" onClick={() => close()}>
                             X
                           </button>
                         )}
@@ -1317,12 +1317,12 @@ class AncientBoard extends Component {
               ) : (
                 <button className="mythos"></button>
               )}
-              <div className="ancientMythosDiscardButtonDiv">
+              <div className="ancient-mythos-discard-button-div">
                 <Popup
                   contentStyle={{ background: 'transparent', border: 'transparent' }}
                   trigger={
                     this.discardMythosDeck.length !== 0 ? (
-                      <button className="discardButton" id="discardMythos">
+                      <button className="discard-button" id="discardMythos">
                         ODRZUCONE
                       </button>
                     ) : null
@@ -1331,15 +1331,15 @@ class AncientBoard extends Component {
                   nested
                 >
                   {(close) => (
-                    <div className="outerPopupDiscard">
-                      <button className="encounterDiscardCloseButton" onClick={() => close()}>
+                    <div className="outer-popup-discard">
+                      <button className="encounter-discard-close-button" onClick={() => close()}>
                         X
                       </button>
                       <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                         {this.discardMythosDeck.length >= 1 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 1]}`}
                             ></div>
                           </SwiperSlide>
@@ -1347,7 +1347,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 2 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 2]}`}
                             ></div>
                           </SwiperSlide>
@@ -1355,7 +1355,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 3 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 3]}`}
                             ></div>
                           </SwiperSlide>
@@ -1363,7 +1363,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 4 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 4]}`}
                             ></div>
                           </SwiperSlide>
@@ -1371,7 +1371,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 5 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 5]}`}
                             ></div>
                           </SwiperSlide>
@@ -1379,7 +1379,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 6 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 6]}`}
                             ></div>
                           </SwiperSlide>
@@ -1387,7 +1387,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 7 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 7]}`}
                             ></div>
                           </SwiperSlide>
@@ -1395,7 +1395,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 8 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 8]}`}
                             ></div>
                           </SwiperSlide>
@@ -1403,7 +1403,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 9 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 9]}`}
                             ></div>
                           </SwiperSlide>
@@ -1411,7 +1411,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 10 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 10]}`}
                             ></div>
                           </SwiperSlide>
@@ -1419,7 +1419,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 11 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 11]}`}
                             ></div>
                           </SwiperSlide>
@@ -1427,7 +1427,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 12 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 12]}`}
                             ></div>
                           </SwiperSlide>
@@ -1435,7 +1435,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 13 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 13]}`}
                             ></div>
                           </SwiperSlide>
@@ -1443,7 +1443,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 14 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 14]}`}
                             ></div>
                           </SwiperSlide>
@@ -1451,7 +1451,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 15 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 15]}`}
                             ></div>
                           </SwiperSlide>
@@ -1459,7 +1459,7 @@ class AncientBoard extends Component {
                         {this.discardMythosDeck.length >= 16 ? (
                           <SwiperSlide>
                             <div
-                              className="encounterCardDiscard"
+                              className="encounter-card-discard"
                               id={`Mythos${this.discardMythosDeck[this.discardMythosDeck.length - 16]}`}
                             ></div>
                           </SwiperSlide>
