@@ -43,15 +43,15 @@ class ShubNiggurathMysteryRise extends Component {
                 <button className="token-mystery-killing"></button>
               )}
               {this.state.counter === this.state.characters + 3 ? (
-                <button className="token-mystery-konster-done" onClick={this.state.shubNiggurathSlayed}></button>
+                <button className="token-mystery-monster-done" onClick={this.state.shubNiggurathSlayed}></button>
               ) : null}
             </div>
           </div>
           <div className="mystery-monster-addons">
-            <button className="mystery-monster-tokenMinus" onClick={this.counterDecrement}></button>
-            <button className="mystery-monster-tokenHealth"></button>
+            <button className="mystery-monster-token-minus" onClick={this.counterDecrement}></button>
+            <button className="mystery-monster-token-health"></button>
             <button className="mystery-monster-counter">{`${this.state.counter}/${this.state.characters + 3}`}</button>
-            <button className="mystery-monster-tokenPlus" onClick={this.counterIncrement}></button>
+            <button className="mystery-monster-token-plus" onClick={this.counterIncrement}></button>
           </div>
         </div>
       </div>

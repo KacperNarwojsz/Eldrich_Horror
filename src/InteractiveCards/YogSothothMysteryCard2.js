@@ -26,7 +26,7 @@ const YogSothothMysteryCard2 = ({
         <div className="mystery-counter">
           <button className="token-mystery-minus" onClick={mysteryDecrement}></button>
           <button className="token-mystery-clue"></button>
-          <button className="token-mystery-mlus" onClick={mysteryIncrementFull}></button>
+          <button className="token-mystery-plus" onClick={mysteryIncrementFull}></button>
         </div>
         {mysteryCounter !== characters ? (
           <button className="token-mystery-counter">{`${mysteryCounter}/${characters}`}</button>
