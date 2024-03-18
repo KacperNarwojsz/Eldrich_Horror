@@ -22,7 +22,7 @@ class ShubNiggurathSheet extends Component {
               className={this.props.isLoadDone ? 'ancient-sheet' : 'ancient-sheet-stamp'}
               id={this.props.ancientCardFlipped ? `${this.props.ancient}SheetBack` : `${this.props.ancient}SheetFront`}
               tabIndex="0"
-            ></figure>
+            />
           }
           modal
           nested

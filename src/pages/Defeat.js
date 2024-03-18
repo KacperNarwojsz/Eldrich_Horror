@@ -7,8 +7,7 @@ const Defeat = ({ reloadApp }) => {
       <div className="defeat-div">
         <h1 className="defeat-text">PORAŻKA</h1>
         <button className="defeat-button" onClick={reloadApp}>
-          {' '}
-          Zagraj <br></br>ponownie{' '}
+          Zagraj <br></br>ponownie
         </button>
       </div>
     </div>
