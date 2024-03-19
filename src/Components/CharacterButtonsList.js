@@ -3,11 +3,11 @@ import '../pages/AllPages.css';
 
 const CharacterButtonsList = ({ characters, setCharacters }) => {
   return (
-    <ul style={{ paddingLeft: 0 }}>
+    <ul className="char-buttons-ul">
       {Array.from({ length: 8 }).map((_, index) => {
         return (
           <React.Fragment>
-            <li style={{ display: 'inline-block' }}>
+            <li className="char-button-li">
               <button
                 className={characters === index + 1 ? 'char-button-active' : 'char-button'}
                 onClick={() => setCharacters(index + 1)}

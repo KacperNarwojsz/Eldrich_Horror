@@ -3,6 +3,7 @@ import EncountersCards from '../Components/EncountersCards';
 import EldritchBoard from '../Components/EldritchBoard';
 import AncientBoard from '../Components/AncientBoard';
 import Popup from 'reactjs-popup';
+import BackBoardPopup from '../Components/BackBoardPopup';
 import chooseRandom from '../Components/Shuffler';
 import { ANCIENTS, CARDS, EXPEDITIONS } from '../constants';
 import './AllPages.css';
@@ -206,10 +207,9 @@ class Ancient extends Component {
       (currentExpedition) => currentExpedition !== this.state.expeditionReverseShuffle
     );
     this.shuffleDeckReverseExpedition = filterExpeditions;
-    let backupExpeditions = this.shuffleDeckReverseExpeditionFiltered.filter(
+    this.shuffleDeckReverseExpeditionFiltered = this.shuffleDeckReverseExpeditionFiltered.filter(
       (currentExpedition) => currentExpedition !== this.state.expeditionReverseShuffle
     );
-    this.shuffleDeckReverseExpeditionFiltered = backupExpeditions;
     if (this.shuffleDeckReverseExpedition.length === 0 && this.shuffleDeckReverseExpeditionFiltered.length !== 0) {
       this.setState({
         expeditionReverseShuffle: chooseRandom(this.shuffleDeckReverseExpeditionFiltered),
@@ -244,47 +244,7 @@ class Ancient extends Component {
           <div className="top-div">
             <div className="board-div">
               <div className="flex-div">
-                <Popup
-                  contentStyle={{
-                    background: 'transparent',
-                    border: 'transparent',
-                  }}
-                  trigger={<button className="back-board-button"></button>}
-                  modal
-                  nested
-                >
-                  {(close) => (
-                    <div className="defeat-popup">
-                      <h1 className="defeat-popup-text">Czy chcesz wrócić ?</h1>
-                      <div className="defeat-choice-buttons">
-                        <button
-                          className="defeat-choice-button"
-                          onClick={
-                            () => this.props.chooseAncient(this.state.ancient)
-                            // this.props.ancient === ANCIENTS.AZATHOTH
-                            //   ? this.state.chooseAzathoth
-                            //   : this.props.ancient === ANCIENTS.YOGSOTHOTH
-                            //   ? this.state.chooseYogSothoth
-                            //   : this.props.ancient === ANCIENTS.SHUBNIGGURATH
-                            //   ? this.state.chooseShubNiggurath
-                            //   : this.state.chooseCthulhu
-                          }
-                        >
-                          TAK
-                        </button>
-                        <button className="defeat-choice-button" onClick={() => close()}>
-                          NIE
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </Popup>
-                {/* <button className="back-board-button" 
-                                        onClick={this.props.ancient === 'Azathoth'?this.state.chooseAzathoth
-                                                :this.props.ancient === 'YogSothoth'?this.state.chooseYogSothoth
-                                                :this.props.ancient === 'ShubNiggurath'?this.state.chooseShubNiggurath
-                                                :this.state.chooseCthulhu}></button> */}
-                {/* <button onClick={this.removeExpedition}>CLICK ME</button> */}
+                <BackBoardPopup confirm={() => this.props.chooseAncient(this.state.ancient)} />
                 <AncientBoard
                   level={this.state.level}
                   characters={this.state.characters}
@@ -316,7 +276,7 @@ class Ancient extends Component {
                 >
                   {(close) => (
                     <div className="defeat-popup">
-                      <h1 className="defeat-popup-text">Czy chcesz poddać grę?</h1>
+                      <p className="defeat-popup-text">Czy chcesz poddać grę?</p>
                       <div className="defeat-choice-buttons">
                         <button className="defeat-choice-button" onClick={this.state.defeat}>
                           TAK

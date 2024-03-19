@@ -5,7 +5,7 @@ const Victory = ({ reloadApp }) => {
   return (
     <div>
       <div className="victory-div">
-        <h1 className="victory-text">WYGRANA</h1>
+        <p className="victory-text">WYGRANA</p>
         <button className="victory-button" onClick={reloadApp}>
           Zagraj ponownie
         </button>

@@ -28,13 +28,17 @@ const Home = ({ chooseAncient }) => {
         <p className="main-title">WYBIERZ PRZEDWIECZNEGO:</p>
       </div>
       <div className="ancients-buttons">
-        {Object.values(ANCIENTS).map((ancient) => {
-          return (
-            <button className="main-button" id={buttonsIds[ancient]} onClick={() => chooseAncient(ancient)}>
-              {ancientNames[ancient]}
-            </button>
-          );
-        })}
+        <ul className="main-buttons-ul">
+          {Object.values(ANCIENTS).map((ancient) => {
+            return (
+              <li className="main-button-li">
+                <button className="main-button" id={buttonsIds[ancient]} onClick={() => chooseAncient(ancient)}>
+                  {ancientNames[ancient]}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

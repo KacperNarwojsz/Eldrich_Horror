@@ -2,30 +2,29 @@ import React from 'react';
 import { LEVELS } from '../constants';
 import '../pages/AllPages.css';
 
+//Przerobić tak samo jak home buttons
+
 const LevelButtonsList = ({ level, setLvl }) => {
+  const levelNames = {
+    Easy: 'ŁATWY',
+    Normal: 'NORMALNY',
+    Hard: 'TRUDNY',
+  };
   return (
-    <>
-      <button
-        className={level === LEVELS.EASY ? 'lvl-button-active' : 'lvl-button'}
-        onClick={() => setLvl(LEVELS.EASY)}
-      >
-        ŁATWY
-      </button>
-      <br></br>
-      <button
-        className={level === LEVELS.NORMAL ? 'lvl-button-active' : 'lvl-button'}
-        onClick={() => setLvl(LEVELS.NORMAL)}
-      >
-        NORMALNY
-      </button>
-      <br></br>
-      <button
-        className={level === LEVELS.HARD ? 'lvl-button-active' : 'lvl-button'}
-        onClick={() => setLvl(LEVELS.HARD)}
-      >
-        TRUDNY
-      </button>
-    </>
+    <ul className="lvl-buttons-ul">
+      {Object.values(LEVELS).map((levelValue) => {
+        return (
+          <li className="lvl-button-li">
+            <button
+              className={level === levelValue ? 'lvl-button-active' : 'lvl-button'}
+              onClick={() => setLvl(levelValue)}
+            >
+              {levelNames[levelValue]}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

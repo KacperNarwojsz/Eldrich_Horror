@@ -3,8 +3,8 @@ import LvlCharMatt from '../Components/LvlCharMatt';
 import char_icon from '../pictures/LvlChar/CharIcon.png';
 import lvl_icon from '../pictures/LvlChar/LvlIcon.png';
 import CharacterButtonsList from '../Components/CharacterButtonsList';
-import './AllPages.css';
 import LevelButtonsList from '../Components/LevelButtonsList';
+import './AllPages.css';
 
 //TO DO:
 
@@ -18,14 +18,14 @@ const AncientLvlChar = ({ ancient, loadAncient, loadHome, level, characters, set
       <LvlCharMatt>
         <div className="top-div">
           <div className="lvl-div">
-            <h1 className="lvl-char-text">POZIOM</h1>
+            <p className="lvl-char-text">POZIOM</p>
             <div className="lvl-back-div">
               <button className="back-lvl-char-button" onClick={loadHome}></button>
               <img src={lvl_icon} className="lvl-char-icon" alt="lvl_icon" />
             </div>
             <div className="lvl-buttons-div">
               <LevelButtonsList level={level} setLvl={setLvl} />
-              <h1 className="lvl-char-text">LICZBA GRACZY</h1>
+              <p className="lvl-char-text">LICZBA GRACZY</p>
             </div>
           </div>
         </div>
