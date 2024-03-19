@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import EncountersCards from '../Components/EncountersCards';
 import EldritchBoard from '../Components/EldritchBoard';
 import AncientBoard from '../Components/AncientBoard';
-import Popup from 'reactjs-popup';
-import BackBoardPopup from '../Components/BackBoardPopup';
+import BackBoardButton from '../Components/BackBoardButton';
+import SurrenderButton from '../Components/SurrenderButton';
 import chooseRandom from '../Components/Shuffler';
 import { ANCIENTS, CARDS, EXPEDITIONS } from '../constants';
 import './AllPages.css';
+
+// TO DO:
+// close() do przerobienia bez nawiasów
 
 // DONE:
 // karty do contstants.js
@@ -244,7 +247,7 @@ class Ancient extends Component {
           <div className="top-div">
             <div className="board-div">
               <div className="flex-div">
-                <BackBoardPopup confirm={() => this.props.chooseAncient(this.state.ancient)} />
+                <BackBoardButton confirm={() => this.props.chooseAncient(this.state.ancient)} />
                 <AncientBoard
                   level={this.state.level}
                   characters={this.state.characters}
@@ -265,29 +268,7 @@ class Ancient extends Component {
                   victory={this.state.victory}
                   defeat={this.state.defeat}
                 />
-                <Popup
-                  contentStyle={{
-                    background: 'transparent',
-                    border: 'transparent',
-                  }}
-                  trigger={<button className="surrender-button"></button>}
-                  modal
-                  nested
-                >
-                  {(close) => (
-                    <div className="defeat-popup">
-                      <p className="defeat-popup-text">Czy chcesz poddać grę?</p>
-                      <div className="defeat-choice-buttons">
-                        <button className="defeat-choice-button" onClick={this.state.defeat}>
-                          TAK
-                        </button>
-                        <button className="defeat-choice-button" onClick={() => close()}>
-                          NIE
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </Popup>
+                <SurrenderButton confirm={this.state.defeat} />
               </div>
             </div>
           </div>
